@@ -1,7 +1,8 @@
 import { Title } from '../components/title'
+import { Wrap } from '../components/wrap'
 
 const Home = () => (
-	<div>
+	<Wrap>
 		<header>
 			<Title>Hi, I'm Daniel.</Title>
 			<p>
@@ -16,11 +17,10 @@ const Home = () => (
 			</p>
 		</header>
 		<main>
+			<h2>Notes from the front</h2>
+			<a href="/atomic-css">Atomic CSS</a>
 		</main>
-		<footer>
-			&copy;{new Date().getFullYear()}
-		</footer>
-	</div>
+	</Wrap>
 );
 
 export default Home;
