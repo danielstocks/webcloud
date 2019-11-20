@@ -6,25 +6,29 @@ const primaryLight = "rgba(0, 128, 86, 0.2)";
 const link = {
   textDecoration: "none",
   color: primary,
+  whiteSpace: "nowrap",
   position: "relative",
-  backgroundImage: `linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0) 2px,
-    ${primaryLight} 2px,
-    ${primaryLight} 3px,
-    rgba(0, 0, 0, 0) 3px
-  )`,
+  transition: "color 1s ease-in-out",
+  position: "relative",
+  background: `linear-gradient(to top, ${primaryLight} 0%, rgba(0, 0, 0, 0) 1px)`,
   "&:hover": {
-    color: "#222",
-    backgroundImage: `linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0) 2px,
-      ${primary} 2px,
-      ${primary} 3px,
-      rgba(0, 0, 0, 0) 3px
-    )`
+    color: "#333",
+  },
+  "&:after": {
+    background: "none repeat scroll 0 0 transparent",
+    bottom: 0,
+    content: "' '",
+    display: "block",
+    height: "1px",
+    left: "50%",
+    position: "absolute",
+    background: primary,
+    transition: "width 0.2s ease 0s, left 0.2s ease 0s",
+    width: 0
+  },
+  "&:hover:after": {
+    width: "100%",
+    left: "0"
   }
 };
 

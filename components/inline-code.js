@@ -1,7 +1,6 @@
 import { createComponentWithProxy } from "react-fela";
 
 const inlineCode = {
-  padding: "4px",
   margin: "0 4px",
   background: "#f9f9f9",
   border: "1px solid #fff",
