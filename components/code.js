@@ -5,7 +5,6 @@ import theme from 'prism-react-renderer/themes/github';
 const codeBlock = {
   padding: '16px',
   background: '#f9f9f9',
-  margin: '0 0 32px',
   width: "100%",
   overflowX: "auto",
   position: "relative",

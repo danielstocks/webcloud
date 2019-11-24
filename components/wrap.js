@@ -1,11 +1,17 @@
 import { createComponentWithProxy } from "react-fela";
 
 const wrap = () => ({
-  padding: "16px",
+  padding: "0 16px",
   margin: "0 auto",
   maxWidth: "640px",
   display: "flex",
   flexDirection: "column"
 });
 
-export const Wrap = createComponentWithProxy(wrap, "div");
+export const InnerWrap = createComponentWithProxy(wrap, "div");
+
+export const Wrap = ({ children }) => (
+  <InnerWrap id="wrap">
+    {children}
+  </InnerWrap>
+);

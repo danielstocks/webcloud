@@ -4,7 +4,6 @@ const quote = () => ({
   margin: "0",
   fontFamily: "serif",
   fontSize: "24px",
-  margin: "32px 0",
   fontWeight: "200",
   position: "relative",
   fontFamily: "'EB Garamond', serif",

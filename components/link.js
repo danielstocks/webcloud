@@ -1,18 +1,15 @@
 import { createComponentWithProxy } from "react-fela";
 
-const primary = "rgb(0, 128, 86)";
-const primaryLight = "rgba(0, 128, 86, 0.2)";
-
 const link = {
   textDecoration: "none",
-  color: primary,
+  color: "var(--colors-primary)",
   whiteSpace: "nowrap",
   position: "relative",
-  transition: "color 1s ease-in-out",
+  transition: "color 0.2s ease-in-out",
   position: "relative",
-  background: `linear-gradient(to top, ${primaryLight} 0%, rgba(0, 0, 0, 0) 1px)`,
+  background: `linear-gradient(to top, var(--colors-primary-light) 0%, rgba(0, 0, 0, 0) 1px)`,
   "&:hover": {
-    color: "#333",
+    color: "var(--colors-fg)"
   },
   "&:after": {
     background: "none repeat scroll 0 0 transparent",
@@ -22,7 +19,7 @@ const link = {
     height: "1px",
     left: "50%",
     position: "absolute",
-    background: primary,
+    background: "var(--colors-primary)",
     transition: "width 0.2s ease 0s, left 0.2s ease 0s",
     width: 0
   },

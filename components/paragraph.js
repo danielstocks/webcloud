@@ -1,9 +1,9 @@
 import { createComponentWithProxy } from "react-fela";
 
 const p = () => ({
-  margin: "0 0 32px",
+  margin: "0",
   lineHeight: "24px",
-  color: "#333"
+  color: "var(--color-fg)"
 });
 
 export const Paragraph = createComponentWithProxy(p, "p");
