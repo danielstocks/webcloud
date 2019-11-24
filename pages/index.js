@@ -48,6 +48,9 @@ const Home = () => (
       <div>
         <Link href="/atomic-css">Functional Utility-First CSS</Link>
       </div>
+      <div>
+        <Link href="/atomic-css">RTL UI in HTML & CSS</Link>
+      </div>
       <Paragraph>2014</Paragraph>
       <div>
         <div>
