@@ -12,6 +12,7 @@ export const components = {
   wrapper: ArticleWrap,
   h1: Title,
   h2: ({ ...props }) => <Title variant="pear" {...props} />,
+  h3: ({ ...props }) => <Title variant="orange" {...props} />,
   p: Paragraph,
   a: Link,
   li: ListItem,
