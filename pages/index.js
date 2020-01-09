@@ -18,7 +18,7 @@ const Home = () => (
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
         I'm a <Link href="/cv">UI Software Engineer</Link> from Sweden and this
-        is my personal website. I'm Currently working at{" "}
+        is my personal website. I'm currently working at{" "}
         <Link href="https://www.volvocars.com">Volvo Cars</Link>. If you wish to
         get in touch please send an email to{" "}
         <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link> or find
@@ -40,7 +40,13 @@ const Home = () => (
     <Spacer size={6} />
     <Flex as="main">
       <Title variant="pear">Notes from the front</Title>
+      <Spacer size={2} />
       <Paragraph>2020</Paragraph>
+      <div>
+        <Link href="/atomic-css">
+          Design Tokens: Primitives, Decisions & Components
+        </Link>
+      </div>
       <div>
         <Link href="/atomic-css">Personal Website 2020 Tech Stack</Link>
       </div>
