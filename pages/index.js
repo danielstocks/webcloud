@@ -39,7 +39,7 @@ const Home = () => (
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm Daniel and this is my homepage!
+        I'm Daniel and this is my homepage.
         I currently <Link href="/cv">work</Link>
         {" "}with UI Engineering & Design at{" "}
         <Link href="https://www.volvocars.com">Volvo Cars</Link>.
