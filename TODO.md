@@ -1,6 +1,8 @@
 # Backlog
 
-- Highlight SVG social icons on hover
+- light, normal, medium weights in theme.
+
+
 - Add old articles
-- Fix article formatting
 - Fix code dark theme.
+- Small viewports: responsive typography

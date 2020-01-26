@@ -4,6 +4,7 @@ const link = {
   textDecoration: "none",
   color: "var(--colors-primary)",
   whiteSpace: "nowrap",
+  lineHeight: "24px",
   position: "relative",
   transition: "color 0.2s ease-in-out",
   position: "relative",
@@ -29,4 +30,16 @@ const link = {
   }
 };
 
+const iconLink = {
+  opacity: 1,
+  "&:hover": {
+    opacity: 0.8
+  },
+};
+
 export const Link = createComponentWithProxy(link, "a");
+export const IconLink = createComponentWithProxy(iconLink, "a");
+
+
+
+

@@ -4,11 +4,15 @@ import theme from 'prism-react-renderer/themes/github';
 
 const codeBlock = {
   padding: '16px',
-  background: '#eee',
+  background: "var(--colors-bg-alt)",
+  boxShadow: "var(--colors-shadow)",
+  fontSize: "14px",
+  lineHeight: "16px",
   width: "100%",
   overflowX: "auto",
   position: "relative",
   marginLeft: "-16px",
+  marginBottom: "32px",
 };
 const CodeBlock = createComponentWithProxy(codeBlock, 'div');
 

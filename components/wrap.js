@@ -10,8 +10,6 @@ const wrap = () => ({
 
 export const InnerWrap = createComponentWithProxy(wrap, "div");
 
-export const Wrap = ({ children }) => (
-  <InnerWrap id="wrap">
-    {children}
-  </InnerWrap>
+export const Wrap = ({ children, ...props }) => (
+  <InnerWrap {...props}>{children}</InnerWrap>
 );

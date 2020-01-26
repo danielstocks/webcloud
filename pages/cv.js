@@ -8,78 +8,86 @@ import { Title } from "../components/title";
 import { List } from "../components/list";
 import { ListItem } from "../components/list-item";
 import { Paragraph } from "../components/paragraph";
+import { Card } from "../components/card";
 import { Github, Linkedin, Twitter, Email } from "../components/social-icons";
 import { BackToBase } from "../components/back-to-base";
-
-const Job = createComponent({}, "div");
-const JobTitle = createComponent({ fontSize: "24px" }, "div");
-const JobCompany = createComponent({}, "div");
-const JobDuration = createComponent({}, "div");
-const JobLocation = createComponent({}, "div");
-const JobDescription = createComponent({}, "div");
-
-const SocialLink = createComponentWithProxy(
-  {
-    textDecoration: "none",
-    lineHeight: "24px",
-    color: "var(--colors-primary)",
-    "& svg": {
-      verticalAlign: "bottom"
-    }
-  },
-  "a"
-);
+import {
+  Job,
+  JobTitle,
+  JobMeta,
+  JobCompany,
+  JobDuration,
+  JobLocation,
+  JobDescription,
+  SocialLink
+} from "../components/cv";
 
 const CV = () => (
   <Wrap>
     <BackToBase />
+
     <Flex as="header">
       <Title>CV - Daniel Stocks</Title>
-
-      <Spacer size={4} />
-      <Flex>
+      <Spacer size={6} />
+      <Title variant="kiwi">
+        Hi, I'm Daniel, from Sweden. I'm currently working as a technical leader
+        at <Link href="https://www.volvocars.com/">Volvo Cars</Link>, scaling
+        Digital Design, UX & UI engineering with Design Systems.
+      </Title>
+      <Spacer size={6} />
+      <Card>
         <SocialLink href="mailto:daniel@webcloud.se">
-          <Email /> daniel@webcloud.se
+          <Email />
+          <Spacer size={2} />
+          <span>daniel@webcloud.se</span>
         </SocialLink>
-        <Spacer />
+        <Spacer size={2} />
         <SocialLink href="https://github.com/danielstocks">
-          <Github /> github.com/danielstocks
+          <Github />
+          <Spacer size={2} />
+          <span>github.com/danielstocks</span>
         </SocialLink>
-        <Spacer />
+        <Spacer size={2} />
         <SocialLink href="https://twitter.com/roflwtfbbq">
-          <Twitter /> twitter.com/roflwtfbbq
+          <Twitter />
+          <Spacer size={2} />
+          <span>twitter.com/roflwtfbbq</span>
         </SocialLink>
-        <Spacer />
+        <Spacer size={2} />
         <SocialLink href="https://www.linkedin.com/in/daniel-stocks">
-          <Linkedin /> linkedin.com/in/daniel-stocks
+          <Linkedin />
+          <Spacer size={2} />
+          <span>linkedin.com/in/daniel-stocks</span>
         </SocialLink>
-      </Flex>
-      <Spacer size={4} />
-
+      </Card>
+      <Spacer size={6} />
       <Paragraph>
-        My name is Daniel, I'm from Gothenburg, Sweden. I have 10 years plus of
-        working experience with building digital products at startups,
-        advertising agencies, and large-scale enterprises. I'm specialised in UI
-        Engineering (eg. JavaScript/React/Web Platform/Native Android and iOS).
+        I have 10 years plus of working experience with building digital
+        products at startups, advertising agencies, and large-scale enterprises.
+        I'm specialised in UI Engineering (eg. JavaScript/React/Web
+        Platform/Native Android and iOS).
       </Paragraph>
-      <Spacer size={2} />
+      <Spacer size={3} />
       <Paragraph>
-        With a background as CTO and Lead Developer, I've organized multiple
-        teams of software engineers in both small and large scale projects. I
-        have a proven track record of building web and mobile products from
-        scratch to scale.
+        With a backround as CTO and Staff Software Engineeer, I've organized
+        multiple teams of software engineers in both small and large scale
+        projects. I have a proven track record of building web and mobile
+        products from scratch to scale.
       </Paragraph>
     </Flex>
+
     <Spacer size={8} />
+
     <Flex as="main">
       <Title variant="pear">Job Experience</Title>
-      <Spacer size={6} />
-
+      <Spacer size={8} />
       <Job>
         <JobTitle>Staff Software Engineer</JobTitle>
         <JobCompany>Volvo Cars</JobCompany>
-        <JobDuration>January 2019 - Present</JobDuration>
-        <JobLocation>Stockholm, Sweden</JobLocation>
+        <JobMeta>
+          <JobDuration>January 2019 - Present</JobDuration>
+          <JobLocation>Stockholm, Sweden</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             Providing company-wide technical leadership and guidance within the
@@ -111,13 +119,14 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
 
       <Job>
         <JobTitle>CTO</JobTitle>
         <JobCompany>Carvanro</JobCompany>
-        <JobDuration>Feburary 2016 - March 2018</JobDuration>
-        <JobLocation>London, UK and Tehran, Iran</JobLocation>
+        <JobMeta>
+          <JobDuration>Feburary 2016 - March 2018</JobDuration>
+          <JobLocation>London, UK and Tehran, Iran</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             Building a peer to peer ride-sharing platform to enable more
@@ -146,15 +155,16 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
 
       <Job>
         <JobTitle>Solutions Architect</JobTitle>
         <JobCompany>Evil Enterprise</JobCompany>
-        <JobDuration>
-          September 2013 - December 2015, March 2018 - December 2018
-        </JobDuration>
-        <JobLocation>All over the place</JobLocation>
+        <JobMeta>
+          <JobDuration>
+            September 2013 - December 2015, March 2018 - December 2018
+          </JobDuration>
+          <JobLocation>All over the place</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             Running my own consultancy agency. Helping clients solve problems
@@ -177,13 +187,14 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
 
       <Job>
         <JobTitle>Lead Front-End Developer</JobTitle>
         <JobCompany>Saltside</JobCompany>
-        <JobDuration>August 2011 - September 2013</JobDuration>
-        <JobLocation>Gothenburg, Sweden and Dubai, UAE</JobLocation>
+        <JobMeta>
+          <JobDuration>August 2011 - September 2013</JobDuration>
+          <JobLocation>Gothenburg, Sweden</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             Saltside builds online marketplaces (classifieds) in emerging
@@ -204,13 +215,14 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
 
       <Job>
         <JobTitle>Front-End Developer</JobTitle>
         <JobCompany>Aino</JobCompany>
-        <JobDuration>June 2009 - August 2011</JobDuration>
-        <JobLocation>Gothenburg, Sweden</JobLocation>
+        <JobMeta>
+          <JobDuration>June 2009 - August 2011</JobDuration>
+          <JobLocation>Gothenburg, Sweden</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             Aino is a leading web agency collaborating with some of the biggest
@@ -237,13 +249,14 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
 
       <Job>
         <JobTitle>Front-End Developer Intern</JobTitle>
         <JobCompany>NetRelations</JobCompany>
-        <JobDuration>April 2008 - August 2008</JobDuration>
-        <JobLocation>Gothenburg, Sweden</JobLocation>
+        <JobMeta>
+          <JobDuration>April 2008 - August 2008</JobDuration>
+          <JobLocation>Gothenburg, Sweden</JobLocation>
+        </JobMeta>
         <JobDescription>
           <Paragraph>
             As an intern at NetRelations I learned about the importance of
@@ -262,13 +275,50 @@ const CV = () => (
           </List>
         </JobDescription>
       </Job>
-      <Spacer size={4} />
     </Flex>
 
+    <Spacer size={6} />
     <Title variant="pear">Other Experience</Title>
     <Spacer size={6} />
 
+    <Job>
+      <JobTitle>Founder And Coordinator</JobTitle>
+      <JobCompany>Taket</JobCompany>
+      <JobMeta>
+        <JobDuration>April 2008 - August 2008</JobDuration>
+        <JobLocation>Gothenburg, Sweden</JobLocation>
+      </JobMeta>
+      <JobDescription>
+        <Paragraph>
+          Co-founded a co-working place in the heart of Gothenburg for artists,
+          freelancers and other creative individuals. We frequently organized
+          exhibitions, meetups, workshops etc. At it's peak we were housing ~30
+          individuals renting work space on an annual basis.
+        </Paragraph>
+      </JobDescription>
+    </Job>
+
+    <Spacer size={6} />
     <Title variant="pear">Education</Title>
+    <Spacer size={6} />
+
+    <Job>
+      <JobTitle>Webbutvecklare</JobTitle>
+      <JobCompany>Yrgo</JobCompany>
+      <JobMeta>
+        <JobDuration>2007 – 2009</JobDuration>
+        <JobLocation>Gothenburg, Sweden</JobLocation>
+      </JobMeta>
+      <JobDescription>
+        <Paragraph>
+        Yrkeshögskoleutbildning, 400 YH-poäng.
+        </Paragraph>
+        <Paragraph>
+        A two year vocational course focused on Full-Stack Web Development.
+        Design/UX, HTML, CSS, JavaScript, PHP, SQL, C#, .NET
+        </Paragraph>
+      </JobDescription>
+    </Job>
     <Spacer size={6} />
   </Wrap>
 );

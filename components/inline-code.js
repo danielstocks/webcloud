@@ -2,8 +2,9 @@ import { createComponentWithProxy } from "react-fela";
 
 const inlineCode = {
   margin: "0 4px",
-  background: "--var(colors-bg)",
-  boxShadow: "0px 0px 16px rgba(100,100,100,0.2)",
+  fontSize: "14px",
+  background: "var(--colors-bg-alt)",
+  boxShadow: "var(--colors-shadow)",
   verticalAlign: "bottom"
 };
 

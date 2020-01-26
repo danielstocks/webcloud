@@ -1,10 +1,8 @@
 import { createComponentWithProxy } from "react-fela";
 
 const title = ({ variant = "banana" }) => ({
-  margin: 0,
-  padding: 0,
   ...(variant === "banana" && {
-    fontSize: "64px",
+    fontSize: "56px",
     fontWeight: 500,
     lineHeight: "64px"
   }),

@@ -3,12 +3,12 @@ import { createRenderer } from "fela";
 import { RendererProvider } from "react-fela";
 import { renderToSheetList } from "fela-dom";
 import { colors } from "../theme";
-var UglifyJS = require("uglify-js");
 import fs from "fs";
+var UglifyJS = require("uglify-js");
 
 const clientSideJs = UglifyJS.minify(
   fs.readFileSync("client-js/index.js", "utf8")
-).code
+).code;
 
 function StyleTags({ renderer }) {
   const sheetList = renderToSheetList(renderer);
@@ -31,25 +31,36 @@ class MyDocument extends Document {
     renderer.renderStatic(
       {
         "--colors-bg": colors.light.bg,
+        "--colors-bg-alt": colors.light.bgAlt,
         "--colors-fg": colors.light.fg,
+        "--colors-fg-alt": colors.light.fgAlt,
+        "--colors-border": colors.light.border,
         "--colors-primary": colors.light.primary,
-        "--colors-primary-light": colors.light.primaryLight
+        "--colors-primary-light": colors.light.primaryLight,
+        "--colors-shadow": colors.light.shadow
       },
       ":root"
     );
 
     renderer.renderStatic(
       {
-        margin: "0",
         background: "var(--colors-bg)",
         color: "var(--colors-fg)",
         fontSize: "16px",
-        transition: "color 0.2s ease-in, background 0.2s ease-in",
+        transition: "all 0.2s ease-in",
         lineHeight: 1,
         fontFamily:
           'system-ui, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif'
       },
       "body"
+    );
+
+    renderer.renderStatic(
+      {
+        margin: "0",
+        padding: "0"
+      },
+      "*"
     );
 
     const originalRenderPage = ctx.renderPage;
@@ -77,6 +88,10 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `var COLORS = ${JSON.stringify(colors)}`
             }}
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <script dangerouslySetInnerHTML={{ __html: clientSideJs }} />
         </head>

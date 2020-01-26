@@ -1,80 +1,91 @@
 import { Wrap } from "../components/wrap";
 import { Flex } from "../components/flex";
 import { Spacer } from "../components/spacer";
-import { Link } from "../components/link";
+import { Link, IconLink } from "../components/link";
 import { Title } from "../components/title";
 import { Paragraph } from "../components/paragraph";
 import { Github, Linkedin, Twitter } from "../components/social-icons";
+
+const ArticleGroup = ({ year, children }) => (
+  <>
+    <Flex
+      extend={{
+        flexDirection: "row-reverse",
+        justifyContent: "space-between"
+      }}
+    >
+      <Paragraph>{year}</Paragraph>
+      <Flex>
+        {React.Children.toArray(children).map((article, i) => (
+          <React.Fragment key={year + i}>
+            <div>{article}</div>
+            <Spacer />
+          </React.Fragment>
+        ))}
+      </Flex>
+    </Flex>
+    <Spacer size={3} />
+  </>
+);
 
 const Home = () => (
   <Wrap>
     <Spacer size={10} />
     <Flex id="header" as="header">
-      <Title>Hi, I'm Daniel.</Title>
+      <Title>Hello there.</Title>
       <Spacer size={6} />
       <Title
         variant="kiwi"
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm a <Link href="/cv">UI Software Engineer</Link> from Sweden and this
-        is my personal website. I'm currently working at{" "}
-        <Link href="https://www.volvocars.com">Volvo Cars</Link>. If you wish to
-        get in touch please send an email to{" "}
-        <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link> or find
-        me on{" "}
-        <a href="https://github.com/danielstocks">
+        I'm Daniel and this is my homepage!
+        I currently <Link href="/cv">work</Link>
+        {" "}with UI Engineering & Design at{" "}
+        <Link href="https://www.volvocars.com">Volvo Cars</Link>.
+
+
+        If you wish to get in touch please send an
+        email to{" "}
+        <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link>
+
+        <br />
+        or find me on{" "}
+        <IconLink href="https://github.com/danielstocks">
           <Github />
-        </a>
+        </IconLink>
         ,{" "}
-        <a href="https://twitter.com/roflwtfbbq">
+        <IconLink href="https://twitter.com/roflwtfbbq">
           <Twitter />
-        </a>{" "}
+        </IconLink>{" "}
         or{" "}
-        <a href="https://www.linkedin.com/in/daniel-stocks">
+        <IconLink href="https://www.linkedin.com/in/daniel-stocks">
           <Linkedin />
-        </a>
-        .
+        </IconLink>.
       </Title>
     </Flex>
-    <Spacer size={6} />
+    <Spacer size={8} />
     <Flex as="main">
-      <Title variant="pear">Notes from the front</Title>
-      <Spacer size={2} />
-      <Paragraph>2020</Paragraph>
-      <div>
-        <Link href="/atomic-css">
-          Design Tokens: Primitives, Decisions & Components
+      <Title variant="pear">Articles</Title>
+      <Spacer size={4} />
+
+      <ArticleGroup year="2020">
+        <Link href="/mx-518">MX 518 Retrospect</Link>
+      </ArticleGroup>
+
+      <ArticleGroup year="2014">
+        <Link>A Truly Reactive Sortable Component</Link>
+        <Link>Creating a Sortable List Component in React</Link>
+      </ArticleGroup>
+
+      <ArticleGroup year="2013">
+        <Link href="/best-practice-testing-javascript-event-handlers">
+          How You Should be Testing JavaScript Event Handlers
         </Link>
-      </div>
-      <div>
-        <Link href="/atomic-css">Personal Website 2020 Tech Stack</Link>
-      </div>
-      <Paragraph>2019</Paragraph>
-      <div>
-        <Link href="/atomic-css">Functional Utility-First CSS</Link>
-      </div>
-      <div>
-        <Link href="/atomic-css">RTL UI in HTML & CSS</Link>
-      </div>
-      <Paragraph>2014</Paragraph>
-      <div>
-        <div>
-          <Link>A Truly Reactive Sortable Component</Link>
-        </div>
-        <div>
-          <Link>Creating a Sortable List Component in React</Link>
-        </div>
-      </div>
-      <Paragraph>2013</Paragraph>
-      <Paragraph>
-        <div>
-          <Link>How You Should be Testing JavaScript Event Handlers</Link>
-        </div>
-        <div>
-          <Link>Stubbing window.location in JavaScript</Link>
-        </div>
-      </Paragraph>
+        <Link href="/stubbing-window-location-javascript">
+          Stubbing window.location in JavaScript
+        </Link>
+      </ArticleGroup>
     </Flex>
   </Wrap>
 );
