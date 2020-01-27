@@ -15,17 +15,22 @@ export const components = {
   h1: ({ children, props }) => (
     <>
       <Title {...props}>{children}</Title>
-      <Spacer size={5} />
     </>
   ),
   h2: ({ ...props }) => (
     <>
       <Spacer size={5} />
-      <Title variant="orange" {...props} />
+      <Title as="h2" variant="orange" {...props} />
       <Spacer size={3} />
     </>
   ),
-  h3: ({ ...props }) => <Title variant="apple" {...props} />,
+  h3: ({ ...props }) => (
+    <>
+      <Spacer size={5} />
+      <Title as="h3" variant="apple" {...props} />
+      <Spacer size={3} />
+    </>
+  ),
   Intro: ({ ...props }) => (
     <>
       <Title variant="kiwi" {...props} />
@@ -34,8 +39,8 @@ export const components = {
   ),
   PubDate: ({ ...props }) => (
     <>
-      <Paragraph extend={{ fontStyle: "italic", color: "var(--colors-fg-alt)" }} {...props} />
       <Spacer size={2} />
+      <Paragraph extend={{ fontSize: "12px", color: "var(--colors-fg-alt)" }} {...props} />
     </>
   ),
   p: ({ ...props }) => (
@@ -62,6 +67,9 @@ export const components = {
       <Spacer size={2} />
     </>
   ),
+  hr: function thematicBreak() {
+    return <Spacer size={4} />;
+  },
   code: Code,
   blockquote: Quote,
   inlineCode: InlineCode,

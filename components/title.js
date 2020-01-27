@@ -4,7 +4,7 @@ const title = ({ variant = "banana" }) => ({
   ...(variant === "banana" && {
     fontSize: "56px",
     fontWeight: 500,
-    lineHeight: "64px"
+    lineHeight: "60px"
   }),
   ...(variant === "pear" && {
     fontSize: "32px",

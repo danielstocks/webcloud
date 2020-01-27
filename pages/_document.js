@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import { createRenderer } from "fela";
 import { RendererProvider } from "react-fela";
 import { renderToSheetList } from "fela-dom";
-import { colors } from "../theme";
+import { themes } from "../theme";
 import fs from "fs";
 var UglifyJS = require("uglify-js");
 
@@ -28,16 +28,21 @@ class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const renderer = createRenderer();
 
+    const theme = themes["light"];
+
     renderer.renderStatic(
       {
-        "--colors-bg": colors.light.bg,
-        "--colors-bg-alt": colors.light.bgAlt,
-        "--colors-fg": colors.light.fg,
-        "--colors-fg-alt": colors.light.fgAlt,
-        "--colors-border": colors.light.border,
-        "--colors-primary": colors.light.primary,
-        "--colors-primary-light": colors.light.primaryLight,
-        "--colors-shadow": colors.light.shadow
+        "--colors-bg": theme.colors.bg,
+        "--colors-bg-alt": theme.colors.bgAlt,
+        "--colors-fg": theme.colors.fg,
+        "--colors-fg-alt": theme.colors.fgAlt,
+        "--colors-border": theme.colors.border,
+        "--colors-primary": theme.colors.primary,
+        "--colors-primary-light": theme.colors.primaryLight,
+        "--colors-shadow": theme.shadow,
+        "--font-weights-light": theme.fontWeights.light,
+        "--font-weights-normal": theme.fontWeights.normal,
+        "--font-weights-bold": theme.fontWeights.bold
       },
       ":root"
     );
@@ -86,7 +91,7 @@ class MyDocument extends Document {
           <StyleTags renderer={this.props.renderer} />
           <script
             dangerouslySetInnerHTML={{
-              __html: `var COLORS = ${JSON.stringify(colors)}`
+              __html: `var THEMES = ${JSON.stringify(themes)}`
             }}
           />
           <meta

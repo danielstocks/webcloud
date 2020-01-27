@@ -3,7 +3,6 @@ import { createComponentWithProxy } from "react-fela";
 const link = {
   textDecoration: "none",
   color: "var(--colors-primary)",
-  whiteSpace: "nowrap",
   lineHeight: "24px",
   position: "relative",
   transition: "color 0.2s ease-in-out",

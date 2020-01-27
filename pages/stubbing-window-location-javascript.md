@@ -1,7 +1,8 @@
+# Stubbing window.location in JavaScript
 
 <PubDate>6 February 2013</PubDate>
 
-# Stubbing window.location in JavaScript
+---
 
 Let's imagine you have the following code:
 

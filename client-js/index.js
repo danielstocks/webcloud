@@ -13,26 +13,29 @@ var light = "light";
 var dark = "dark";
 
 if (currentTheme) {
-  setColors(currentTheme);
+  setTheme(currentTheme);
 }
 
-function setColors(theme) {
-  var colors = COLORS[theme];
-  root.setProperty("--colors-bg", colors.bg);
-  root.setProperty("--colors-bg-alt", colors.bgAlt);
-  root.setProperty("--colors-fg", colors.fg);
-  root.setProperty("--colors-fg-alt", colors.fgAlt);
-  root.setProperty("--colors-border", colors.border);
-  root.setProperty("--colors-primary", colors.primary);
-  root.setProperty("--colors-primary-light", colors.primaryLight);
-  root.setProperty("--colors-shadow", colors.shadow);
+function setTheme(theme) {
+  var theme = THEMES[theme];
+  root.setProperty("--colors-bg", theme.colors.bg);
+  root.setProperty("--colors-bg-alt", theme.colors.bgAlt);
+  root.setProperty("--colors-fg", theme.colors.fg);
+  root.setProperty("--colors-fg-alt", theme.colors.fgAlt);
+  root.setProperty("--colors-border", theme.colors.border);
+  root.setProperty("--colors-primary", theme.colors.primary);
+  root.setProperty("--colors-primary-light", theme.colors.primaryLight);
+  root.setProperty("--shadow", theme.shadow);
+  root.setProperty("--font-weights-light", theme.fontWeights.light);
+  root.setProperty("--font-weights-normal", theme.fontWeights.normal);
+  root.setProperty("--font-weights-bold", theme.fontWeights.bold);
 }
 
 function buttonClick(e) {
   currentTheme = currentTheme === "light" ? "dark" : "light";
   e.currentTarget.innerHTML = currentTheme === "light" ? dark : light;
   window.localStorage.setItem("current-theme", currentTheme);
-  setColors(currentTheme);
+  setTheme(currentTheme);
 }
 
 document.addEventListener("DOMContentLoaded", function() {

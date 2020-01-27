@@ -1,6 +1,8 @@
+# How You Should be Testing JavaScript Event Handlers
+
 <PubDate>22 February 2013</PubDate>
 
-# How You Should be Testing JavaScript Event Handlers
+---
 
 At some point, you'll find event handling code on top of jQuery written like this:
 

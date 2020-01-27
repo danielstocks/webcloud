@@ -39,16 +39,11 @@ const Home = () => (
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm Daniel and this is my homepage.
-        I currently <Link href="/cv">work</Link>
-        {" "}with UI Engineering & Design at{" "}
-        <Link href="https://www.volvocars.com">Volvo Cars</Link>.
-
-
-        If you wish to get in touch please send an
-        email to{" "}
+        I'm Daniel and this is my homepage. I currently{" "}
+        <Link href="/cv">work</Link> with UI Engineering & Design at{" "}
+        <Link href="https://www.volvocars.com">Volvo Cars</Link>. If you wish to
+        get in touch please send an email to{" "}
         <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link>
-
         <br />
         or find me on{" "}
         <IconLink href="https://github.com/danielstocks">
@@ -61,7 +56,8 @@ const Home = () => (
         or{" "}
         <IconLink href="https://www.linkedin.com/in/daniel-stocks">
           <Linkedin />
-        </IconLink>.
+        </IconLink>
+        .
       </Title>
     </Flex>
     <Spacer size={8} />
@@ -74,8 +70,12 @@ const Home = () => (
       </ArticleGroup>
 
       <ArticleGroup year="2014">
-        <Link>A Truly Reactive Sortable Component</Link>
-        <Link>Creating a Sortable List Component in React</Link>
+        <Link href="/truly-reactive-sortable-component">
+          Creating a Sortable List Component in React #2
+        </Link>
+        <Link href="/sortable-list-component-react-js">
+          Creating a Sortable List Component in React #1
+        </Link>
       </ArticleGroup>
 
       <ArticleGroup year="2013">
