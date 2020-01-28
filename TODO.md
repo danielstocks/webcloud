@@ -1,13 +1,13 @@
 # Backlog
 
+- Custom focus styles (chrome)
 
-- Fix code dark theme.
+- Figure out what to do with jQuery collapse page
+- Figure out what to do with sounds experiment page.
+- Remove react sortable page.
+- Analytics?
 
-- Cutstom focus styles (chrome)
 
-- Inline links animation doesn't work when spanning over multiple lines, maybe animate left to right instead?
-
-- Small viewports: responsive typography
-
-- "Follow me" footer.
+# Post launch
+- Blog post: "Twelve years of Google analytics"
 

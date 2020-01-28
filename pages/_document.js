@@ -29,28 +29,17 @@ class MyDocument extends Document {
     const renderer = createRenderer();
 
     const theme = themes["light"];
+    const cssVariables = {};
+    Object.keys(theme).forEach(key => {
+      cssVariables["--" + key] = theme[key];
+    });
+
+    renderer.renderStatic(cssVariables, ":root");
 
     renderer.renderStatic(
       {
-        "--colors-bg": theme.colors.bg,
-        "--colors-bg-alt": theme.colors.bgAlt,
-        "--colors-fg": theme.colors.fg,
-        "--colors-fg-alt": theme.colors.fgAlt,
-        "--colors-border": theme.colors.border,
-        "--colors-primary": theme.colors.primary,
-        "--colors-primary-light": theme.colors.primaryLight,
-        "--colors-shadow": theme.shadow,
-        "--font-weights-light": theme.fontWeights.light,
-        "--font-weights-normal": theme.fontWeights.normal,
-        "--font-weights-bold": theme.fontWeights.bold
-      },
-      ":root"
-    );
-
-    renderer.renderStatic(
-      {
-        background: "var(--colors-bg)",
-        color: "var(--colors-fg)",
+        background: "var(--color-bg)",
+        color: "var(--color-fg)",
         fontSize: "16px",
         transition: "all 0.2s ease-in",
         lineHeight: 1,

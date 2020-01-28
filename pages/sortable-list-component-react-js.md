@@ -56,7 +56,7 @@ li {
 
 And finally we call to render it into the DOM:
 
-```javascript
+```jsx
 ReactDOM.render(
   <List data={colors}/>, document.getElementById('app')
 );
@@ -122,7 +122,7 @@ li.placeholder:before {
 
 All that is left now is to wire up the event handlers to some actual functions.
 
-```javascript
+```jsx
 var List = React.createClass({
   ...
   dragStart: function(e) {

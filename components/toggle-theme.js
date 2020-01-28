@@ -14,12 +14,12 @@ const toggleTheme = () => ({
   transition: "all 200ms ease-in",
   top: "32px",
   right: "32px",
-  background: "var(--colors-bg-alt)",
-  color: "var(--colors-fg-alt)",
-  boxShadow: "4px 4px 0px var(--colors-primary-light)",
+  background: "var(--color-bg-alt)",
+  color: "var(--color-fg-alt)",
+  boxShadow: "4px 4px 0px var(--color-primary-alt)",
   ":hover": {
-    color: "var(--colors-fg)",
-    boxShadow: "4px 4px 0px var(--colors-primary)"
+    color: "var(--color-fg)",
+    boxShadow: "4px 4px 0px var(--color-primary)"
   },
   "@media print": {
     display: "none"

@@ -40,12 +40,15 @@ export const components = {
   PubDate: ({ ...props }) => (
     <>
       <Spacer size={2} />
-      <Paragraph extend={{ fontSize: "12px", color: "var(--colors-fg-alt)" }} {...props} />
+      <Paragraph
+        extend={{ fontSize: "12px", color: "var(--color-fg-alt)" }}
+        {...props}
+      />
     </>
   ),
   p: ({ ...props }) => (
     <>
-      <Paragraph {...props} />
+      <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
       <Spacer size={2} />
     </>
   ),

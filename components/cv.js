@@ -29,10 +29,10 @@ export const JobMeta = ({ children }) => (
       fontSize: "12px",
       fontWeight: 500,
       flexDirection: "row",
-      color: "var(--colors-fg-alt)",
+      color: "var(--color-fg-alt)",
       marginBottom: "16px",
       paddingBottom: "16px",
-      borderBottom: "1px solid var(--colors-border)"
+      borderBottom: "1px solid var(--color-border)"
     }}
   >
     {React.Children.toArray(children).map((item, i) => (
@@ -66,40 +66,32 @@ export const SocialLink = ({ children, ...props }) => (
     as="a"
     extend={{
       flexShrink: 0,
+      flexGrow: 1,
       textDecoration: "none",
       display: "inline-flex",
-      whiteSpace: "nowrap",
       "& svg": {
         verticalAlign: "bottom",
         opacity: 0.8
       },
       "&:hover svg": {
-        opacity: 1
+        opacity: 1,
+        transition: "all 0.2s ease-in-out",
       },
       "&:hover span": {
-        color: "var(--colors-fg)"
+        color: "var(--color-fg)"
       },
       "&:hover span:after": {
         width: "100%",
         left: "0"
       },
       "& span": {
-        color: "var(--colors-primary)",
-        position: "relative",
-        transition: "color 0.2s ease-in-out",
-        position: "relative",
-        background: `linear-gradient(to top, var(--colors-primary-light) 0%, rgba(0, 0, 0, 0) 1px)`,
-        "&:after": {
-          background: "none repeat scroll 0 0 transparent",
-          bottom: 0,
-          content: "' '",
-          display: "block",
-          height: "1px",
-          left: "50%",
-          position: "absolute",
-          background: "var(--colors-primary)",
-          transition: "width 0.2s ease 0s, left 0.2s ease 0s",
-          width: 0
+        color: "var(--color-primary)",
+        lineHeight: "24px",
+        borderBottom: "1px solid var(--color-border)",
+        transition: "all 0.2s ease-in-out",
+        ":hover": {
+          color: "var(--color-fg)",
+          borderBottom: "1px solid var(--color-primary)"
         }
       }
     }}

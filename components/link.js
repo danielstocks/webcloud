@@ -2,43 +2,23 @@ import { createComponentWithProxy } from "react-fela";
 
 const link = {
   textDecoration: "none",
-  color: "var(--colors-primary)",
+  color: "var(--color-primary)",
   lineHeight: "24px",
-  position: "relative",
-  transition: "color 0.2s ease-in-out",
-  position: "relative",
-  background: `linear-gradient(to top, var(--colors-primary-light) 0%, rgba(0, 0, 0, 0) 1px)`,
+  borderBottom: "1px solid var(--color-border)",
+  transition: "all 0.2s ease-in-out",
   "&:hover": {
-    color: "var(--colors-fg)"
-  },
-  "&:after": {
-    background: "none repeat scroll 0 0 transparent",
-    bottom: 0,
-    content: "' '",
-    display: "block",
-    height: "1px",
-    left: "50%",
-    position: "absolute",
-    background: "var(--colors-primary)",
-    transition: "width 0.2s ease 0s, left 0.2s ease 0s",
-    width: 0
-  },
-  "&:hover:after": {
-    width: "100%",
-    left: "0"
+    color: "var(--color-fg)",
+    borderBottom: "1px solid var(--color-primary)"
   }
 };
 
 const iconLink = {
-  opacity: 1,
+  opacity: 0.8,
+  transition: "opacity 0.2s ease-in-out",
   "&:hover": {
-    opacity: 0.8
-  },
+    opacity: 1
+  }
 };
 
 export const Link = createComponentWithProxy(link, "a");
 export const IconLink = createComponentWithProxy(iconLink, "a");
-
-
-
-

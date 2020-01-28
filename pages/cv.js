@@ -35,7 +35,7 @@ const CV = () => (
         Digital Design, UX & UI engineering with Design Systems.
       </Title>
       <Spacer size={6} />
-      <Card>
+      <Card extend={{ width: "100%", marginLeft: "-16px" }}>
         <SocialLink href="mailto:daniel@webcloud.se">
           <Email />
           <Spacer size={2} />
@@ -310,12 +310,10 @@ const CV = () => (
         <JobLocation>Gothenburg, Sweden</JobLocation>
       </JobMeta>
       <JobDescription>
+        <Paragraph>Yrkeshögskoleutbildning, 400 YH-poäng.</Paragraph>
         <Paragraph>
-        Yrkeshögskoleutbildning, 400 YH-poäng.
-        </Paragraph>
-        <Paragraph>
-        A two year vocational course focused on Full-Stack Web Development.
-        Design/UX, HTML, CSS, JavaScript, PHP, SQL, C#, .NET
+          A two year vocational course focused on Full-Stack Web Development.
+          Design/UX, HTML, CSS, JavaScript, PHP, SQL, C#, .NET
         </Paragraph>
       </JobDescription>
     </Job>

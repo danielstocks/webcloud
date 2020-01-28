@@ -35,7 +35,7 @@ Keeping track of DOM changes over time is hard, re-rendering everything based on
 
 The code is pretty straightforward. The interesting part is the sort method, where we are setting a "dragging" property to the state
 
-```javascript
+```jsx
 sort: function(colors, dragging) {
   var data = this.state.data;
   data.colors = colors;

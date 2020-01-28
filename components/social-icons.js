@@ -2,7 +2,7 @@ import { createComponentWithProxy } from "react-fela";
 
 const Svg = createComponentWithProxy(
   {
-    fill: "var(--colors-fg)",
+    fill: "var(--color-fg)",
     transition: "fill 0.2s ease-in"
   },
   "svg"

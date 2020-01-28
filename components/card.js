@@ -2,11 +2,11 @@ import { createComponent } from "react-fela";
 
 export const Card = createComponent(
   {
-    padding: "32px",
+    padding: "16px",
     flexDirection: "column",
     display: "flex",
-    background: "var(--colors-bg-alt)",
-    boxShadow: "var(--colors-shadow)"
+    background: "var(--color-bg-alt)",
+    boxShadow: "var(--shadow)"
   },
   "div"
 );

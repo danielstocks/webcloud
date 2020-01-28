@@ -18,17 +18,9 @@ if (currentTheme) {
 
 function setTheme(theme) {
   var theme = THEMES[theme];
-  root.setProperty("--colors-bg", theme.colors.bg);
-  root.setProperty("--colors-bg-alt", theme.colors.bgAlt);
-  root.setProperty("--colors-fg", theme.colors.fg);
-  root.setProperty("--colors-fg-alt", theme.colors.fgAlt);
-  root.setProperty("--colors-border", theme.colors.border);
-  root.setProperty("--colors-primary", theme.colors.primary);
-  root.setProperty("--colors-primary-light", theme.colors.primaryLight);
-  root.setProperty("--shadow", theme.shadow);
-  root.setProperty("--font-weights-light", theme.fontWeights.light);
-  root.setProperty("--font-weights-normal", theme.fontWeights.normal);
-  root.setProperty("--font-weights-bold", theme.fontWeights.bold);
+  Object.keys(theme).forEach(function(key) {
+    root.setProperty("--" + key, theme[key]);
+  })
 }
 
 function buttonClick(e) {
