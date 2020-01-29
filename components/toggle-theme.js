@@ -15,10 +15,9 @@ const toggleTheme = () => ({
   top: "32px",
   right: "32px",
   background: "var(--color-bg-alt)",
-  color: "var(--color-fg-alt)",
+  color: "var(--color-fg)",
   boxShadow: "4px 4px 0px var(--color-primary-alt)",
   ":hover": {
-    color: "var(--color-fg)",
     boxShadow: "4px 4px 0px var(--color-primary)"
   },
   "@media print": {
