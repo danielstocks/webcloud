@@ -88,6 +88,7 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <script dangerouslySetInnerHTML={{ __html: clientSideJs }} />
+          <title>webcloud</title>
         </head>
         <body>
           <Main />
