@@ -2,7 +2,7 @@
   "trailingSlash": true,
   "routes": [
     {
-      "src": "/jQuery-Collapse/",
+      "src": "/jQuery-Collapse",
       "dest": "https://webcloud-jquery-collapse.netlify.com/"
     }
   ]
