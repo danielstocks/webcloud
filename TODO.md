@@ -1,9 +1,6 @@
-## must have
-- Figure out trailing slashes.
- - Locally (dev server)
- - Try zeit now (as oppposed to netlify)
-
-- Figure out <title>'s
+## Must have
+- Figure out <title>'s for articles
+- Setupr redirects for old urls
 - Favicon
 - 404 page
 - HTTPS?
@@ -12,6 +9,7 @@
 # post launch cleanup
 - remove gh-pages branch on jQuery-Collapse
 - remove gh-pages branch on react-sortable
+- jQuery collapse travis build broken.
 
 
 ## nice to have

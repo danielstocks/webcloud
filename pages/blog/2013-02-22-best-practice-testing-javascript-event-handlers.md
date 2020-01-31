@@ -1,4 +1,6 @@
-# How You Should be Testing JavaScript Event Handlers
+# How to test JavaScript Event Handlers
+
+---
 
 <PubDate>22 February 2013</PubDate>
 

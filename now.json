@@ -5,6 +5,10 @@
     {
       "source": "/jQuery-Collapse/(.*)",
       "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
+    },
+    {
+      "source": "/Assortment/(.*)",
+      "destination": "https://webcloud-assortment.netlify.com/$1"
     }
   ]
 }

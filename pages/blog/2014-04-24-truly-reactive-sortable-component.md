@@ -1,5 +1,7 @@
 # A Truly Reactive Sortable Component
 
+---
+
 <PubDate>24 April 2014</PubDate>
 
 ---

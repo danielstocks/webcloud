@@ -5,6 +5,17 @@ import { Link, IconLink } from "../components/link";
 import { Title } from "../components/title";
 import { Paragraph } from "../components/paragraph";
 import { Github, Linkedin, Twitter } from "../components/social-icons";
+import blogPosts from "../blog-manifest.json";
+
+const blogPostsGroupedByYear = {};
+blogPosts.forEach(post => {
+  const year = post.date.split("-")[0];
+  if (blogPostsGroupedByYear[year]) {
+    blogPostsGroupedByYear[year].push(post);
+  } else {
+    blogPostsGroupedByYear[year] = [post];
+  }
+});
 
 const ArticleGroup = ({ year, children }) => (
   <>
@@ -65,27 +76,16 @@ const Home = () => (
       <Title variant="pear">Articles</Title>
       <Spacer size={4} />
 
-      <ArticleGroup year="2020">
-        <Link href="/mx-518/">MX 518 Retrospect</Link>
-      </ArticleGroup>
-
-      <ArticleGroup year="2014">
-        <Link href="/truly-reactive-sortable-component/">
-          Creating a Sortable List Component in React #2
-        </Link>
-        <Link href="/sortable-list-component-react-js/">
-          Creating a Sortable List Component in React #1
-        </Link>
-      </ArticleGroup>
-
-      <ArticleGroup year="2013">
-        <Link href="/best-practice-testing-javascript-event-handlers/">
-          How You Should be Testing JavaScript Event Handlers
-        </Link>
-        <Link href="/stubbing-window-location-javascript/">
-          Stubbing window.location in JavaScript
-        </Link>
-      </ArticleGroup>
+      {Object.keys(blogPostsGroupedByYear)
+        .sort()
+        .reverse()
+        .map(year => (
+          <ArticleGroup key={year} year={year}>
+            {blogPostsGroupedByYear[year].map(post => (
+              <Link href={post.path}>{post.title}</Link>
+            ))}
+          </ArticleGroup>
+        ))}
     </Flex>
   </Wrap>
 );

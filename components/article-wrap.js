@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Wrap } from "./wrap";
 import { Link, IconLink } from "./link";
 import { Flex } from "./flex";

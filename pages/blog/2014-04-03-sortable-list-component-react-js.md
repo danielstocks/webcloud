@@ -1,5 +1,7 @@
 # Creating a Sortable List Component in React
 
+---
+
 <PubDate>3 April 2014</PubDate>
 
 ---
