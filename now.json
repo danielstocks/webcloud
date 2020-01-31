@@ -1,9 +1,10 @@
 {
   "trailingSlash": true,
-  "routes": [
+
+  "rewrites": [
     {
-      "src": "/jQuery-Collapse",
-      "dest": "https://webcloud-jquery-collapse.netlify.com/"
+      "source": "/jQuery-Collapse/(.*)",
+      "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
     }
   ]
 }
