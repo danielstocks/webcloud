@@ -1,5 +1,8 @@
 ## must have
 - Figure out trailing slashes.
+ - Locally (dev server)
+ - Try zeit now (as oppposed to netlify)
+
 - Figure out <title>'s
 - Favicon
 - 404 page
