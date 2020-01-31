@@ -66,23 +66,23 @@ const Home = () => (
       <Spacer size={4} />
 
       <ArticleGroup year="2020">
-        <Link href="/mx-518">MX 518 Retrospect</Link>
+        <Link href="/mx-518/">MX 518 Retrospect</Link>
       </ArticleGroup>
 
       <ArticleGroup year="2014">
-        <Link href="/truly-reactive-sortable-component">
+        <Link href="/truly-reactive-sortable-component/">
           Creating a Sortable List Component in React #2
         </Link>
-        <Link href="/sortable-list-component-react-js">
+        <Link href="/sortable-list-component-react-js/">
           Creating a Sortable List Component in React #1
         </Link>
       </ArticleGroup>
 
       <ArticleGroup year="2013">
-        <Link href="/best-practice-testing-javascript-event-handlers">
+        <Link href="/best-practice-testing-javascript-event-handlers/">
           How You Should be Testing JavaScript Event Handlers
         </Link>
-        <Link href="/stubbing-window-location-javascript">
+        <Link href="/stubbing-window-location-javascript/">
           Stubbing window.location in JavaScript
         </Link>
       </ArticleGroup>
