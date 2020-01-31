@@ -1,4 +1,5 @@
 ## must have
+- Figure out trailing slashes.
 - Figure out <title>'s
 - Favicon
 - 404 page
@@ -14,3 +15,4 @@
 - Project Link list
 - Experiments Link list
 - Curated Link List
+- RSS Feeds.
