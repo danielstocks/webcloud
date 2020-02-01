@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import React from "react";
+import Document, { Main, Head } from "next/document";
 import { createRenderer } from "fela";
 import { RendererProvider } from "react-fela";
 import { renderToSheetList } from "fela-dom";
@@ -10,13 +11,25 @@ const clientSideJs = UglifyJS.minify(
   fs.readFileSync("client-js/index.js", "utf8")
 ).code;
 
+class MyHead extends Head {
+  render() {
+    let { head } = this.context._documentProps;
+    let children = this.props.children;
+    return (
+      <head {...this.props}>
+        {children}
+        {head}
+      </head>
+    );
+  }
+}
+
 function StyleTags({ renderer }) {
   const sheetList = renderToSheetList(renderer);
-  return sheetList.map(({ type, media, rehydration, support, css }) => (
+  return sheetList.map(({ type, media, support, css }) => (
     <style
       key={type + media}
       media={media}
-      data-fela-rehydration={rehydration}
       data-fela-type={type}
       data-fela-support={support}
       dangerouslySetInnerHTML={{ __html: css }}
@@ -24,7 +37,7 @@ function StyleTags({ renderer }) {
   ));
 }
 
-class MyDocument extends Document {
+export default class extends Document {
   static async getInitialProps(ctx) {
     const renderer = createRenderer();
 
@@ -75,8 +88,8 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <head>
+      <html>
+        <MyHead>
           <StyleTags renderer={this.props.renderer} />
           <script
             dangerouslySetInnerHTML={{
@@ -88,14 +101,11 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <script dangerouslySetInnerHTML={{ __html: clientSideJs }} />
-          <title>webcloud</title>
-        </head>
+        </MyHead>
         <body>
           <Main />
         </body>
-      </Html>
+      </html>
     );
   }
 }
-
-export default MyDocument;

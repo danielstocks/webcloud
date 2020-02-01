@@ -1,4 +1,3 @@
-import { ArticleWrap } from "../components/article-wrap";
 import { ArticleImage } from "../components/article-image";
 import { Title } from "../components/title";
 import { Paragraph } from "../components/paragraph";
@@ -11,12 +10,6 @@ import { ListItem } from "../components/list-item";
 import { Quote } from "../components/quote";
 
 export const components = {
-  wrapper: ArticleWrap,
-  h1: ({ children, props }) => (
-    <>
-      <Title {...props}>{children}</Title>
-    </>
-  ),
   h2: ({ ...props }) => (
     <>
       <Spacer size={5} />
@@ -35,15 +28,6 @@ export const components = {
     <>
       <Title variant="kiwi" {...props} />
       <Spacer size={6} />
-    </>
-  ),
-  PubDate: ({ ...props }) => (
-    <>
-      <Spacer size={2} />
-      <Paragraph
-        extend={{ fontSize: "12px", color: "var(--color-fg-alt)" }}
-        {...props}
-      />
     </>
   ),
   p: ({ ...props }) => (
@@ -71,7 +55,7 @@ export const components = {
     </>
   ),
   hr: function thematicBreak() {
-    return <Spacer size={4} />;
+    return <Spacer size={8} />;
   },
   code: Code,
   blockquote: Quote,

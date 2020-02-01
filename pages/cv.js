@@ -1,5 +1,5 @@
-import { createComponent } from "react-fela";
-import { createComponentWithProxy } from "react-fela";
+import React from "react";
+import Head from "next/head";
 import { Wrap } from "../components/wrap";
 import { Spacer } from "../components/spacer";
 import { Link } from "../components/link";
@@ -24,8 +24,10 @@ import {
 
 const CV = () => (
   <Wrap>
+    <Head>
+      <title>CV - Daniel Stocks</title>
+    </Head>
     <BackToBase />
-
     <Flex as="header">
       <Title>CV - Daniel Stocks</Title>
       <Spacer size={6} />

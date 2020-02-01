@@ -2,10 +2,6 @@
 
 ---
 
-<PubDate>24 April 2014</PubDate>
-
----
-
 You may recently have heard a lot of chanting on how [data changing over time is the root of all evil](http://youtu.be/nYkdrAPrdcw?t=24m58s), "the source of truth" and how [React](http://facebook.github.io/react/) is all about "one directional data flow". These are all pretty words but what do they mean in practice?
 
 To better illustrate this I'm going to take the [Sortable React component](/sortable-list-component-react-js) that I built, and fix a major flaw in it's design.

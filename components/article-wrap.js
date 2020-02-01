@@ -1,6 +1,7 @@
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 import { Wrap } from "./wrap";
-import { Link, IconLink } from "./link";
+import { Link } from "./link";
 import { Flex } from "./flex";
 import { Card } from "./card";
 import { Spacer } from "./spacer";
@@ -18,8 +19,11 @@ const Avatar = createComponentWithProxy(
   "img"
 );
 
-export const ArticleWrap = ({ children }) => (
+export const ArticleWrap = ({ title, children }) => (
   <Wrap>
+    <Head>
+      <title>{title} - webcloud</title>
+    </Head>
     <BackToBase />
     {children}
     <Spacer size={8} />

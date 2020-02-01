@@ -2,10 +2,6 @@
 
 ---
 
-<PubDate>22 February 2013</PubDate>
-
----
-
 At some point, you'll find event handling code on top of jQuery written like this:
 
 ```javascript

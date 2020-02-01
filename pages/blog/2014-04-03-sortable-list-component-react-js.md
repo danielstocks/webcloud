@@ -2,10 +2,6 @@
 
 ---
 
-<PubDate>3 April 2014</PubDate>
-
----
-
 [React](https://reactjs.org/) is all about data flow. The idea is that you should never manually change the state of the application by modifying the DOM. Instead, the DOM should always reflect the UI based on the state of the application data.
 
 Having personally worked a lot with libraries like jQuery and Backbone.js, the non DOM-centric philosophy of React was initially somewhat confusing to me.

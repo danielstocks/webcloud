@@ -2,10 +2,6 @@
 
 ---
 
-<PubDate>6 February 2013</PubDate>
-
----
-
 Let's imagine you have the following code:
 
 ```javascript

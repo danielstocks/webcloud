@@ -1,3 +1,4 @@
+import React from "react";
 import { Wrap } from "../components/wrap";
 import { Flex } from "../components/flex";
 import { Spacer } from "../components/spacer";
@@ -75,14 +76,13 @@ const Home = () => (
     <Flex as="main">
       <Title variant="pear">Articles</Title>
       <Spacer size={4} />
-
       {Object.keys(blogPostsGroupedByYear)
         .sort()
         .reverse()
-        .map(year => (
-          <ArticleGroup key={year} year={year}>
+        .map((year, i) => (
+          <ArticleGroup key={year+i} year={year}>
             {blogPostsGroupedByYear[year].map(post => (
-              <Link href={post.path}>{post.title}</Link>
+              <Link key={post.path} href={post.path}>{post.title}</Link>
             ))}
           </ArticleGroup>
         ))}
