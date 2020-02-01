@@ -1,17 +1,5 @@
 {
   "trailingSlash": true,
-
-  "rewrites": [
-    {
-      "source": "/jQuery-Collapse/(.*)",
-      "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
-    },
-    {
-      "source": "/Assortment/(.*)",
-      "destination": "https://webcloud-assortment.netlify.com/$1"
-    }
-  ],
-
   "redirects": [
     {
       "source": "/stubbing-window-location-javascript",
@@ -28,6 +16,16 @@
     {
       "source": "/truly-reactive-sortable-component",
       "destination": "/blog/2014-04-24-truly-reactive-sortable-component"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/jQuery-Collapse/(.*)",
+      "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
+    },
+    {
+      "source": "/Assortment/(.*)",
+      "destination": "https://webcloud-assortment.netlify.com/$1"
     }
   ]
 }
