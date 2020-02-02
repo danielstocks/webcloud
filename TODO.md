@@ -3,6 +3,7 @@
 - Remove gh-pages branch on react-sortable
 - jQuery collapse travis build broken.
 - Cancel github private plan
+- Setup: cdn.simpleanalytics.io/hello.js => sa.webcloud.se/hello.js
 - Add simple analytics to jQuery Collapse + Assortment pages
 
 ## Backlog

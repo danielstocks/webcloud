@@ -1,3 +1,4 @@
+import { createComponentWithProxy } from "react-fela";
 import { ArticleImage } from "../components/article-image";
 import { Title } from "../components/title";
 import { Paragraph } from "../components/paragraph";
@@ -8,6 +9,14 @@ import { InlineCode } from "../components/inline-code";
 import { List } from "../components/list";
 import { ListItem } from "../components/list-item";
 import { Quote } from "../components/quote";
+
+export const Strong = createComponentWithProxy(
+  {
+    fontWeight: "500",
+    color: "var(--color-fg)"
+  },
+  "strong"
+);
 
 export const components = {
   h2: ({ ...props }) => (
@@ -58,6 +67,7 @@ export const components = {
     return <Spacer size={8} />;
   },
   code: Code,
+  strong: Strong,
   blockquote: Quote,
   inlineCode: InlineCode,
   Spacer
