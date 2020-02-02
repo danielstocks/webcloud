@@ -6,7 +6,6 @@ const quote = () => ({
   fontSize: "24px",
   fontWeight: "200",
   position: "relative",
-  fontFamily: "'EB Garamond', serif",
   textRendering: "optimizeLegibility",
   fontSmoothing: "antialiased",
   "& p": {

@@ -1,20 +1,16 @@
 ## Must have
-
-- Favicon
-- 404 page
-- HTTPS?
 - Simple Analytics?
+- HTTPS?
 
-
-# post launch cleanup
+# Post launch cleanup
 - remove gh-pages branch on jQuery-Collapse
 - remove gh-pages branch on react-sortable
 - jQuery collapse travis build broken.
 - Cancel github private plan
 
-
-## nice to have
+## Backlog
+- Next/Prev Article.
 - Project Link list
 - Experiments Link list
 - Curated Link List
-- RSS Feeds.
+- RSS Feed.

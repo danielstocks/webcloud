@@ -51,7 +51,7 @@ const Home = () => (
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm Daniel and this is my homepage. I currently{" "}
+        I'm Daniel and this is my personal website. I currently{" "}
         <Link href="/cv">work</Link> with UI Engineering & Design at{" "}
         <Link href="https://www.volvocars.com">Volvo Cars</Link>. If you wish to
         get in touch please send an email to{" "}

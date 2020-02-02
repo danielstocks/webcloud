@@ -33,8 +33,8 @@ const CV = () => (
       <Spacer size={6} />
       <Title variant="kiwi">
         Hi, I'm Daniel, from Sweden. I'm currently working as a technical leader
-        at <Link href="https://www.volvocars.com/">Volvo Cars</Link>, scaling
-        Digital Design, UX & UI engineering with Design Systems.
+        at <Link href="https://www.volvocars.com/">Volvo Cars</Link> building
+        design systems to scale UX & UI across platforms.
       </Title>
       <Spacer size={6} />
       <Card extend={{ width: "100%", marginLeft: "-16px" }}>
