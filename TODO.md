@@ -1,5 +1,4 @@
 ## Must have
-- Simple Analytics?
 - HTTPS?
 
 # Post launch cleanup
