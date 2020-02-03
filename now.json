@@ -1,4 +1,5 @@
 {
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/stubbing-window-location-javascript/",
@@ -30,6 +31,5 @@
       "source": "/Assortment/(.*)",
       "destination": "https://webcloud-assortment.netlify.com/$1"
     }
-  ],
-  "trailingSlash": true,
+  ]
 }
