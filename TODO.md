@@ -1,5 +1,5 @@
 ## Backlog
-- 308 redirect errors (trailing slash) for proxied pageas
+- 308 redirect errors (trailing slash) for proxied pages
 - Next/Prev Article.
 - Project Link list
 - Experiments Link list
