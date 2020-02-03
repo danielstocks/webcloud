@@ -83,12 +83,16 @@ export const components = {
     <>
       <Link {...props}>{children}</Link>
       <Span
+        title="Disclaimer: I get paid if you click on this link and buy something."
         extend={{
+          cursor: "help",
           fontSize: "8px",
-          padding: "2px",
-          background: "yellow",
-          marginLeft: "4px",
-          color: "red"
+          padding: "4px",
+          position: "relative",
+          top: "-2px",
+          background: "var(--color-primary-alt)",
+          marginLeft: "8px",
+          color: "var(--color-fg)"
         }}
       >
         Sponsored Link
