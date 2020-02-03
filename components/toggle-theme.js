@@ -20,6 +20,10 @@ const toggleTheme = () => ({
   ":hover": {
     boxShadow: "4px 4px 0px var(--color-primary)"
   },
+  ":active": {
+    boxShadow: "none",
+    transform: "translate(4px,4px)"
+  },
   "@media print": {
     display: "none"
   }

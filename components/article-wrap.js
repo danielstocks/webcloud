@@ -11,8 +11,12 @@ import { BackToBase } from "./back-to-base";
 import { createComponentWithProxy } from "react-fela";
 const Avatar = createComponentWithProxy(
   {
-    width: "96px",
-    height: "96px",
+    width: "72px",
+    height: "72px",
+    "@media (min-width: 480px)": {
+      width: "96px",
+      height: "96px"
+    },
     borderRadius: "50%",
     boxShadow: "var(--shadow)"
   },
@@ -31,7 +35,7 @@ export const ArticleWrap = ({ title, children }) => (
       <div>
         <Avatar src="/photo.jpg" />
       </div>
-      <Spacer size={4} />
+      <Spacer size={3} />
       <Flex>
         <Title variant="kiwi">Hi, thanks for reading!</Title>
         <Spacer size={2} />

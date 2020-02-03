@@ -23,7 +23,7 @@ const title = ({ variant = "banana" }) => ({
   ...(variant === "apple" && {
     fontSize: "18px",
     fontWeight: "var(--font-weight-bold)",
-    lineHeight: "18px"
+    lineHeight: "24px"
   }),
   ...(variant === "kiwi" && {
     fontSize: "24px",

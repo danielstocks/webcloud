@@ -86,8 +86,9 @@ export const components = {
         title="Disclaimer: I get paid if you click on this link and buy something."
         extend={{
           cursor: "help",
-          fontSize: "8px",
-          padding: "4px",
+          fontSize: "10px",
+          letterSpacing: "0.03em",
+          padding: "2px 4px",
           position: "relative",
           top: "-2px",
           background: "var(--color-primary-alt)",
@@ -95,7 +96,7 @@ export const components = {
           color: "var(--color-fg)"
         }}
       >
-        Sponsored Link
+        sponsored link
       </Span>
     </>
   )
