@@ -2,33 +2,33 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/stubbing-window-location-javascript/",
+      "source": "/stubbing-window-location-javascript",
       "destination": "/blog/2013-02-06-stubbing-window-location-javascript"
     },
     {
-      "source": "/best-practice-testing-javascript-event-handlers/",
+      "source": "/best-practice-testing-javascript-event-handlers",
       "destination": "/blog/2013-02-22-best-practice-testing-javascript-event-handlers"
     },
     {
-      "source": "/sortable-list-component-react-js/",
+      "source": "/sortable-list-component-react-js",
       "destination": "/blog/2014-04-03-sortable-list-component-react-js"
+    },
+    {
+      "source": "/truly-reactive-sortable-component",
+      "destination": "/blog/2014-04-24-truly-reactive-sortable-component"
     },
     {
       "source": "/react-sortable",
       "destination": "/blog/2014-04-03-sortable-list-component-react-js"
-    },
-    {
-      "source": "/truly-reactive-sortable-component/",
-      "destination": "/blog/2014-04-24-truly-reactive-sortable-component"
     }
   ],
   "rewrites": [
     {
-      "source": "/jQuery-Collapse/(.*)",
+      "source": "/jQuery-Collapse(.*)",
       "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
     },
     {
-      "source": "/Assortment/(.*)",
+      "source": "/Assortment(.*)",
       "destination": "https://webcloud-assortment.netlify.com/$1"
     }
   ]
