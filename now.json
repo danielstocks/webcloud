@@ -1,5 +1,6 @@
 {
-  "trailingSlash": false,
+  "trailingSlash": true,
+  "cleanUrls": false,
   "redirects": [
     {
       "source": "/stubbing-window-location-javascript",
