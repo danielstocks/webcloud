@@ -1,6 +1,5 @@
 {
   "trailingSlash": true,
-  "renderSingle": false,
   "cleanUrls": false,
   "redirects": [
     {
