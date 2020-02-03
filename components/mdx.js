@@ -10,6 +10,8 @@ import { List } from "../components/list";
 import { ListItem } from "../components/list-item";
 import { Quote } from "../components/quote";
 
+export const Span = createComponentWithProxy({}, "span");
+
 export const Strong = createComponentWithProxy(
   {
     fontWeight: "500",
@@ -70,5 +72,27 @@ export const components = {
   strong: Strong,
   blockquote: Quote,
   inlineCode: InlineCode,
-  Spacer
+  Spacer,
+  SponsoredParagraph: ({ ...props }) => (
+    <>
+      <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
+      <Spacer size={2} />
+    </>
+  ),
+  SponsoredLink: ({ children, ...props }) => (
+    <>
+      <Link {...props}>{children}</Link>
+      <Span
+        extend={{
+          fontSize: "8px",
+          padding: "2px",
+          background: "yellow",
+          marginLeft: "4px",
+          color: "red"
+        }}
+      >
+        Sponsored Link
+      </Span>
+    </>
+  )
 };

@@ -104,13 +104,9 @@ export default class extends Document {
         </MyHead>
         <body>
           <Main />
-          <script
-            async
-            defer
-            src="https://cdn.simpleanalytics.io/hello.js"
-          ></script>
+          <script async defer src="https://sa.webcloud.se/app.js" />
           <noscript>
-            <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+            <img src="https://sa.webcloud.se/image.gif" alt="" />
           </noscript>
         </body>
       </html>

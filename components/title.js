@@ -8,7 +8,7 @@ const title = ({ variant = "banana" }) => ({
     "@media (min-width: 480px)": {
       fontSize: "56px",
       lineHeight: "60px"
-    }
+    },
   }),
   ...(variant === "pear" && {
     fontSize: "32px",

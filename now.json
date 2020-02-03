@@ -1,5 +1,4 @@
 {
-  "trailingSlash": true,
   "redirects": [
     {
       "source": "/stubbing-window-location-javascript/",
@@ -11,6 +10,10 @@
     },
     {
       "source": "/sortable-list-component-react-js/",
+      "destination": "/blog/2014-04-03-sortable-list-component-react-js"
+    },
+    {
+      "source": "/react-sortable",
       "destination": "/blog/2014-04-03-sortable-list-component-react-js"
     },
     {
@@ -27,5 +30,6 @@
       "source": "/Assortment/(.*)",
       "destination": "https://webcloud-assortment.netlify.com/$1"
     }
-  ]
+  ],
+  "trailingSlash": true,
 }
