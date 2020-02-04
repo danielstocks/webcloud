@@ -20,6 +20,10 @@
     {
       "source": "/react-sortable",
       "destination": "/blog/2014-04-03-sortable-list-component-react-js"
+    },
+    {
+      "source": "/jQuery-Collapse",
+      "destination": "/jQuery-Collapse/"
     }
   ],
   "rewrites": [
