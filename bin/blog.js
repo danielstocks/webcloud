@@ -28,7 +28,7 @@ const listPosts = () => {
     .map(({ path, title }) => ({
       title: getTitleFromPost(path),
       date: getDateFromFileName(title),
-      path: `/blog/${title}`
+      path: `/blog/${title}/`
     }))
     .sort((a, b) => b.sortOrder - a.sortOrder);
 };
