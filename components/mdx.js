@@ -1,3 +1,4 @@
+import React from "react";
 import { createComponentWithProxy } from "react-fela";
 import { ArticleImage } from "../components/article-image";
 import { Title } from "../components/title";
@@ -11,7 +12,7 @@ import { ListItem } from "../components/list-item";
 import { Quote } from "../components/quote";
 
 export const Span = createComponentWithProxy({}, "span");
-
+export const Div = createComponentWithProxy({}, "div");
 export const Strong = createComponentWithProxy(
   {
     fontWeight: "500",
@@ -49,7 +50,22 @@ export const components = {
   ),
   a: Link,
   img: ({ ...props }) => (
-    <ArticleImage extend={{ margin: "24px 0" }} {...props} />
+    <Div
+      extend={{
+        margin: "24px 0",
+        ":after": {
+          top: "4px",
+          position: "relative",
+          content: "attr(data-title)",
+          fontSize: "12px",
+          color: "var(--color-fg-alt)",
+          fontStyle: "italic"
+        }
+      }}
+      data-title={props.title}
+    >
+      <ArticleImage {...props} />
+    </Div>
   ),
   Link,
   li: ListItem,
