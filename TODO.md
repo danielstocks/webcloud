@@ -1,5 +1,5 @@
 ## Backlog
-
+- Redirect WWW to root domain
 - Next/Prev Article.
 - Project Link list
 - Experiments Link list
