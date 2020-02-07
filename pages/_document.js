@@ -108,7 +108,7 @@ export default class extends Document {
           <noscript>
             <img src="https://sa.webcloud.se/image.gif" alt="" />
           </noscript>
-          <script src="instant.js" type="module" defer />
+          <script src="/instant.js" type="module" defer />
         </body>
       </html>
     );
