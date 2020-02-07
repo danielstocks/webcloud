@@ -40,7 +40,7 @@ export const ArticleWrap = ({ title, children }) => (
         <Title variant="kiwi">Hi, thanks for reading!</Title>
         <Spacer size={2} />
         <Paragraph extend={{ color: "var(--color-fg-alt)" }}>
-          I'm Daniel, Software Engineer from Sweden. This is my personal{" "}
+          I&rsquo;m Daniel, Software Engineer from Sweden. This is my personal{" "}
           <Link href="/">website</Link>. You can also find me on{""}{" "}
           <Link href="https://twitter.com/roflwtfbbq">Twitter</Link> and{" "}
           <Link href="https://github.com/danielstocks">GitHub</Link>.

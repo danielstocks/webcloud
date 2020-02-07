@@ -11,76 +11,68 @@ import { List } from "../components/list";
 import { ListItem } from "../components/list-item";
 import { Quote } from "../components/quote";
 
-export const Span = createComponentWithProxy({}, "span");
-export const Div = createComponentWithProxy({}, "div");
-export const Strong = createComponentWithProxy(
+const Span = createComponentWithProxy({}, "span");
+const Strong = createComponentWithProxy(
   {
     fontWeight: "500",
     color: "var(--color-fg)"
   },
   "strong"
 );
+const Intro = ({ ...props }) => (
+  <>
+    <Title variant="kiwi" {...props} />
+    <Spacer size={6} />
+  </>
+);
+const p = ({ ...props }) => (
+  <>
+    <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
+    <Spacer size={2} />
+  </>
+);
 
 export const components = {
-  h2: ({ ...props }) => (
-    <>
-      <Spacer size={5} />
-      <Title as="h2" variant="orange" {...props} />
-      <Spacer size={3} />
-    </>
-  ),
-  h3: ({ ...props }) => (
-    <>
-      <Spacer size={5} />
-      <Title as="h3" variant="apple" {...props} />
-      <Spacer size={3} />
-    </>
-  ),
-  Intro: ({ ...props }) => (
-    <>
-      <Title variant="kiwi" {...props} />
-      <Spacer size={6} />
-    </>
-  ),
-  p: ({ ...props }) => (
-    <>
-      <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
-      <Spacer size={2} />
-    </>
-  ),
+  h2: function H2({ ...props }) {
+    return (
+      <>
+        <Spacer size={5} />
+        <Title as="h2" variant="orange" {...props} />
+        <Spacer size={3} />
+      </>
+    );
+  },
+  h3: function H3({ ...props }) {
+    return (
+      <>
+        <Spacer size={5} />
+        <Title as="h3" variant="apple" {...props} />
+        <Spacer size={3} />
+      </>
+    );
+  },
+  Intro,
+  p,
   a: Link,
-  img: ({ ...props }) => (
-    <Div
-      extend={{
-        margin: "24px 0",
-        ":after": {
-          top: "4px",
-          position: "relative",
-          content: "attr(data-title)",
-          fontSize: "12px",
-          color: "var(--color-fg-alt)",
-          fontStyle: "italic"
-        }
-      }}
-      data-title={props.title}
-    >
-      <ArticleImage {...props} />
-    </Div>
-  ),
+  img: ArticleImage,
   Link,
   li: ListItem,
-  ul: ({ ...props }) => (
-    <>
-      <List {...props} />
-      <Spacer size={2} />
-    </>
-  ),
-  ol: ({ ...props }) => (
-    <>
-      <List as="ol" {...props} />
-      <Spacer size={2} />
-    </>
-  ),
+  ul: function ul({ ...props }) {
+    return (
+      <>
+        <List {...props} />
+        <Spacer size={2} />
+      </>
+    );
+  },
+  ol: function ol({ ...props }) {
+    return (
+      <>
+        <List as="ol" {...props} />
+        <Spacer size={2} />
+      </>
+    );
+  },
   hr: function thematicBreak() {
     return <Spacer size={8} />;
   },
@@ -89,31 +81,35 @@ export const components = {
   blockquote: Quote,
   inlineCode: InlineCode,
   Spacer,
-  SponsoredParagraph: ({ ...props }) => (
-    <>
-      <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
-      <Spacer size={2} />
-    </>
-  ),
-  SponsoredLink: ({ children, ...props }) => (
-    <>
-      <Link {...props}>{children}</Link>
-      <Span
-        title="Disclaimer: I get paid if you click on this link and buy something."
-        extend={{
-          cursor: "help",
-          fontSize: "10px",
-          letterSpacing: "0.03em",
-          padding: "2px 4px",
-          position: "relative",
-          top: "-2px",
-          background: "var(--color-primary-alt)",
-          marginLeft: "8px",
-          color: "var(--color-fg)"
-        }}
-      >
-        sponsored link
-      </Span>
-    </>
-  )
+  SponsoredParagraph: function SponsoredParagraph({ ...props }) {
+    return (
+      <>
+        <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
+        <Spacer size={2} />
+      </>
+    );
+  },
+  SponsoredLink: function SponsoredLink({ children, ...props }) {
+    return (
+      <>
+        <Link {...props}>{children}</Link>
+        <Span
+          title="Disclaimer: I get paid if you click on this link and buy something."
+          extend={{
+            cursor: "help",
+            fontSize: "10px",
+            letterSpacing: "0.03em",
+            padding: "2px 4px",
+            position: "relative",
+            top: "-2px",
+            background: "var(--color-primary-alt)",
+            marginLeft: "8px",
+            color: "var(--color-fg)"
+          }}
+        >
+          sponsored link
+        </Span>
+      </>
+    );
+  }
 };

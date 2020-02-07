@@ -1,5 +1,5 @@
+import React from "react";
 import { createComponent } from "react-fela";
-import { createComponentWithProxy } from "react-fela";
 import { Paragraph } from "../components/paragraph";
 import { Flex } from "../components/flex";
 import { Spacer } from "../components/spacer";

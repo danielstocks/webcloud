@@ -1,3 +1,4 @@
+import React from "react";
 import { createComponentWithProxy } from "react-fela";
 
 const Svg = createComponentWithProxy(

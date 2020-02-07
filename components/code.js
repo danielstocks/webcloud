@@ -1,3 +1,4 @@
+import React from "react";
 import { createComponentWithProxy } from "react-fela";
 import Highlight, { defaultProps } from "prism-react-renderer";
 
@@ -27,7 +28,8 @@ const tokenColor = tokens => {
   if (tokens.includes("string")) return "var(--color-code-string)";
   if (tokens.includes("function")) return "var(--color-code-function)";
   if (tokens.includes("dom")) return "var(--color-code-dom)";
-  if (tokens.includes("property-access")) return "var(--color-code-property-access)";
+  if (tokens.includes("property-access"))
+    return "var(--color-code-property-access)";
   if (tokens.includes("class-name")) return "var(--color-code-class-name)";
   if (tokens.includes("operator")) return "var(--color-code-operator)";
   if (tokens.includes("selector")) return "var(--color-primary)";
@@ -46,7 +48,7 @@ export const Code = ({ children, className }) => {
       code={code}
       language={language}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({ tokens, getTokenProps }) => (
         <CodeBlock>
           {tokens.map((line, i) => (
             <div key={i}>
@@ -58,8 +60,9 @@ export const Code = ({ children, className }) => {
                     extend={{
                       color: tokenColor(props.className.split(" ").slice(1))
                     }}
-                    children={props.children}
-                  />
+                  >
+                    {props.children}
+                  </Token>
                 );
               })}
             </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "./link";
 import { Spacer } from "./spacer";
 import { createComponentWithProxy } from "react-fela";

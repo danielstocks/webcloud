@@ -1,4 +1,7 @@
 ## Backlog
+
+- Visual Regression CI
+- Lighthouse CI
 - Redirect WWW to root domain
 - Next/Prev Article.
 - Project Link list
