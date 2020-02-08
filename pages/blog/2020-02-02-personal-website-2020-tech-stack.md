@@ -10,7 +10,7 @@ I first launched my personal website in 2007. It's taken many forms since. From 
 
 ## Static Pages
 
-In 2010 this website was statically generated with Jekyll. It took a bunch of Markdown files, processed them and spat out a bunch of HTML files that we're uploaded on a CDN. What felt like great tool at the time also felt somewhat novel. A good fit for my personal blog, but for "real" work? I wasn't sure.
+In 2010 this website was statically generated with Jekyll. It took a bunch of Markdown files, processed them and spat out HTML files, later uploaded on a CDN. What felt like great tool at the time also felt somewhat novel. A good fit for my personal blog, but for "real" work? I wasn't sure.
 
 Fast forward to 2020: Apparently what I did a decade ago is now referred to as the [Jamstack](https://jamstack.org/). Frameworks like [Next.js](nextjs.org/), [Gatsby](https://www.gatsbyjs.com/careers/) and [Hugo](https://gohugo.io/) have become the new mainstream. Companies like Netlify and ZEIT have made static site deployments easy, cheap and accessible to all. What used to be a novel way to build your blog is is now multi-million dollar business model.
 
@@ -29,7 +29,7 @@ After using raw HTML to create my blog posts for the past 6 years, I'm back to g
 
 The only recent development and addition to this area is the innovation of [MDX](https://mdxjs.com/). I've been a heavy MDX user at work during the past year. Turns out it's a great way to write technical documentation as it allows you to embed JSX into your Markdown.
 
-Slightly related to recent rise of "static site" popularisation, 2019 also turned out to be a good year for the so called [Headless CMS](https://www.smashingmagazine.com/2018/11/structured-content-done-right/) solutions. This make me happy, as a Front-End developer I've been fighting proprietary black box legacy CMS's for most of my working career.
+Slightly related to recent rise of "static site" popularisation, 2019 also turned out to be a good year for the so called [Headless CMS](https://www.smashingmagazine.com/2018/11/structured-content-done-right/) solutions. This make me happy, as a Front-End developer I've been fighting proprietary black box legacy CMSs for most of my working career.
 
 
 [![Serverless Server side Rendering](/serverless-ssr.jpg "Serverless Server Side Rendering As a Service - SSSRaaS. It's a joke... or is it?")](https://twitter.com/KrijnHoetmer/status/1071010569438838786)
