@@ -6,7 +6,7 @@
 
 I first launched my personal website in 2007. It's taken many forms since. From raw HTML, to PHP, to [Django](https://www.djangoproject.com/), to [Jekyll](https://jekyllrb.com/), and back to raw HTML. It's always been a fun way to explore new technology and do silly over-the-top things without justifying the cost. Who needs Medium or other proprietary blogging platforms!?
 
-
+![Vintage Webcloud](/vintage-webcloud-2010.jpg "Ah, my good old 2010 vintage website in IE7, starting to feel like an old bottle of wine")
 
 ## Static Pages
 
