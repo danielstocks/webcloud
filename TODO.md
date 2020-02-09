@@ -8,7 +8,6 @@
 - Projects Link list
 - Experiments Link list
 - Visual Regression CI
-- Uptime Bot?
 - Next/Prev Article.
 - Curated Link List
 - RSS Feed
