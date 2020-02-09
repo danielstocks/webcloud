@@ -2,7 +2,7 @@
 
 ---
 
-<Intro>Roughly every six years or so, I set out on the seemingly meaningless expedition of re-building my personal website. This post outlines decisions and thoughts on the new architecture, as well as a reflection over what's changed over time.</Intro>
+<Intro>Roughly every six years or so, I set out on the seemingly meaningless expedition of re-building my personal website. This post outlines decisions and thoughts on the new architecture, as well as a reflection over what's changed since last time.</Intro>
 
 I first launched my personal website in 2007. It's taken many forms since. From raw HTML, to PHP, to [Django](https://www.djangoproject.com/), to [Jekyll](https://jekyllrb.com/), and back to raw HTML. It's always been a fun way to explore new technology and do silly over-the-top things without justifying the cost. Who needs Medium or other proprietary blogging platforms!?
 
@@ -108,9 +108,9 @@ One really powerful concept that most static site hosting providers now offer ou
 
 ## Long term maintenance
 
-Sometimes the last thing you want to do is maintain your personal site.
+The last thing I want to do is to have to spend a lot of time maintaining my personal website. For this rewrite I got a great deal of inspiration from Jeff Huangs excellent article: [This Page is Designed to Last](https://jeffhuang.com/designed_to_last/)
 
-Thankfully static sites are very low maintenance. The only pain point throughout the year was fixing occasionally breaking 3:rd party JavaScript plugins: Namely Disqus and JSFiddle embeds. So, I got rid of those.
+Looking back at the old site: The main pain point throughout the years was fixing occasionally breaking 3:rd party JavaScript plugins: Namely Disqus and JSFiddle embeds. So, I got rid of those.
 
 
 ## In summary
