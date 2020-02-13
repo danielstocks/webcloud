@@ -1,0 +1,13 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./out",
+      "url": [
+        "index.html",
+        "404.html",
+        "cv/index.html",
+        "blog/2020-02-02-personal-website-2020-tech-stack/index.html"
+      ]
+    }
+  }
+}
