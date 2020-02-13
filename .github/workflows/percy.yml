@@ -1,0 +1,21 @@
+name: Visual Regression Test
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: Percy Test
+        uses: percy/snapshot-action@v0.1.0
+        with:
+          build-directory: "out/"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
