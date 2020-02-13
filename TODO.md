@@ -1,10 +1,10 @@
 ## Backlog
 
-- Lighthouse CI
 - Fix lighthouse issues
 - Redirect WWW to root domain
 - Disable dark theme for CV Print mode.
 - Collapse widget for Job sections in CV
+- Style guide
 - Projects Link list
 - Experiments Link list
 - Visual Regression CI
