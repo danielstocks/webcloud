@@ -1,8 +1,7 @@
 import React from "react";
 import Document, { Main, Head } from "next/document";
 import { createRenderer } from "fela";
-import { RendererProvider } from "react-fela";
-import { renderToSheetList } from "fela-dom";
+import { RendererProvider, renderToNodeList } from "react-fela";
 import { themes } from "../theme";
 import fs from "fs";
 var UglifyJS = require("uglify-js");
@@ -22,19 +21,6 @@ class MyHead extends Head {
       </head>
     );
   }
-}
-
-function StyleTags({ renderer }) {
-  const sheetList = renderToSheetList(renderer);
-  return sheetList.map(({ type, media, support, css }) => (
-    <style
-      key={type + media}
-      media={media}
-      data-fela-type={type}
-      data-fela-support={support}
-      dangerouslySetInnerHTML={{ __html: css }}
-    />
-  ));
 }
 
 export default class extends Document {
@@ -90,7 +76,7 @@ export default class extends Document {
     return (
       <html>
         <MyHead>
-          <StyleTags renderer={this.props.renderer} />
+          {renderToNodeList(this.props.renderer)}
           <script
             dangerouslySetInnerHTML={{
               __html: `var THEMES = ${JSON.stringify(themes)}`
