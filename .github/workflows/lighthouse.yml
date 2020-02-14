@@ -14,7 +14,7 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.3.x
-          lhci autorun --collect.url=${DEPLOY_URL} --upload.target=temporary-public-storage || echo "LHCI failed!"
+          lhci autorun --collect.url=${DEPLOY_URL} --collect.url=${DEPLOY_URL}/cv/ --collect.url=${DEPLOY_URL}/blog/2020-02-02-personal-website-2020-tech-stack/ --upload.target=temporary-public-storage || echo "LHCI failed!"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
           DEPLOY_URL: ${{ github.event.deployment_status.target_url }}
