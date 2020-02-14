@@ -1,5 +1,5 @@
 name: Visual Regression Test
-on: [push, pull_request]
+on: deployment
 jobs:
   build:
     runs-on: ubuntu-latest
