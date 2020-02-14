@@ -11,7 +11,9 @@ jobs:
         with:
           node-version: 10.x
       - name: Percy Test
-        run: npx percy exec -- node test/snapshots.js
+        run: |
+          npm install
+          npx percy exec -- node test/snapshots.js
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           DEPLOY_URL: ${{ github.event.deployment_status.target_url }}
