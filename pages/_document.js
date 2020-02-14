@@ -74,7 +74,7 @@ export default class extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <MyHead>
           {renderToNodeList(this.props.renderer)}
           <script
