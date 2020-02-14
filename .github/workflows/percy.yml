@@ -1,7 +1,8 @@
 name: Visual Regression Test
-on: deployment
+on: deployment_status
 jobs:
   build:
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -9,13 +10,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install, build
+      - name: Percy Test
         run: |
           npm install
-          npm run build
-      - name: Percy Test
-        uses: percy/snapshot-action@v0.1.0
-        with:
-          build-directory: "out/"
+          npx percy exec -- node test/snapshots.js
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          DEPLOY_URL: ${{ github.event.deployment_status.target_url }}

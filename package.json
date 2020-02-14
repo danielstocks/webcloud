@@ -18,6 +18,7 @@
     "uglify-js": "^3.6.9"
   },
   "devDependencies": {
+    "@percy/script": "^1.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0",
     "prettier": "^1.19.1"
