@@ -1,11 +1,9 @@
 ## Backlog
 
-- Fix Lighthouse Issues
-- Redirect WWW to root domain
 - Next/Prev Article.
+- Redirect WWW to root domain
 - Disable dark theme for CV Print mode.
 - Collapse widget for Job sections in CV
-- Blog post: "share on twitter"
 - Style guide
 - Projects Link list
 - Experiments Link list

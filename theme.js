@@ -31,7 +31,7 @@ export const themes = {
     "color-primary-alt": "rgba(0, 128, 86, 0.6)",
     "color-code-punctuation": "#a89828",
     "color-code-comment": "#666",
-    "color-code-method": "#2879a8",
+    "color-code-method": "#3b93c5",
     "color-code-string": "#e6a3cb",
     "color-code-function": "#3fbfbf",
     "color-code-dom": "#f17272",
