@@ -40,6 +40,8 @@ export const ArticleWrap = ({ title, children }) => {
       {children}
       <Spacer size={6} />
       <SocialLink
+        target="_blank"
+        rel="noopener"
         href={`${TWEET}${title} - https://webcloud.se${router.pathname}/`}
       >
         <Twitter />
