@@ -1,7 +1,7 @@
 import React from "react";
 import { createComponentWithProxy } from "react-fela";
 
-export const Div = createComponentWithProxy({}, "div");
+export const Span = createComponentWithProxy({}, "span");
 
 export const Image = createComponentWithProxy(
   {
@@ -15,9 +15,12 @@ export const Image = createComponentWithProxy(
 );
 
 export const ArticleImage = ({ ...props }) => (
-  <Div
+  // Span required here because wrapping a <div> in <a> causes issues with
+  // Chrome/Lightouse acessibility audits
+  <Span
     extend={{
       margin: "24px 0",
+      display: "block",
       ":after": {
         top: "4px",
         position: "relative",
@@ -30,5 +33,5 @@ export const ArticleImage = ({ ...props }) => (
     data-title={props.title}
   >
     <Image loading="lazy" {...props} />
-  </Div>
+  </Span>
 );
