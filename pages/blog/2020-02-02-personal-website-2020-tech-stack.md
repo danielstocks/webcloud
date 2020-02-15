@@ -59,7 +59,7 @@ This essentially means that you can inline exactly the CSS needed to render a sp
 
 Turns out [Facebook is doing something similar](https://twitter.com/adamwathan/status/1123705771995410432?s=12) to this. Disclaimer: while conceptually similar, I'm not convinced by the so called Utility First CSS frameworks like [Tailwind](https://tailwindcss.com/) or [Tachyons](http://tachyons.io/). Why learn a new abstraction when I already know CSS?
 
-### Theming
+### Welcome to the dark side
 
 One thing I wanted for the new site was to let the user pick a preferred color scheme. A light mode or a dark mode (yes I know this is old news). But how could that be done with pre-rendered static HTML pages, no React on the client, and no back-end?
 
@@ -105,6 +105,12 @@ One really powerful concept that most static site hosting providers now offer ou
 }
 ```
 
+## CI/CD
+
+One really cool thing with Zeit Now is that you get **preview deploys** out of the box. Open a pull request and the changes will be deployed in a production like environment.
+
+I was able to leverage GitHub Actions to run Lighthouse Performance and QA tests, as well as Percy visual regression tests against previews deploys in pull requests. This gives me A LOT of confidence that I wont merge anything that will degrade the quality of the site.
+
 
 ## Long term maintenance
 
@@ -115,7 +121,12 @@ Looking back at the old site: The main pain point throughout the years was fixin
 
 ## In summary
 
-Are you wondering how all of this looks ties together? Have a look at the [Git source repository](https://github.com/danielstocks/webcloud/) that powers this site.
+The quality and variety of **free** tools, libraries and services available today is absolutely amazing.
+I truly feel more empowered then ever when it comes to shipping a website in a limited time frame with no budget.
+
+I've been building websites for a relatively long time now (I started out with Microsoft FrontPage and Macromedia Dreamweaver). When I rebuilt my website 6-7 years ago, it was either all manual labour, or spending both time and money on setting up custom infrastructure.
+
+Are you wondering how all of this looks ties together? Have a look at the [GitHub repository](https://github.com/danielstocks/webcloud/) that powers this site.
 
 I'm looking forward to rebuild my site again 2030! So long folks!
 
