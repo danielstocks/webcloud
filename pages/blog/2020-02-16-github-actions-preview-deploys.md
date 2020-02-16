@@ -120,7 +120,7 @@ Instead of running screenshots of all pages (e.g. blog posts individually == too
 
 
 ```javascript
-const PercyScript = require('@percy/script'
+const PercyScript = require('@percy/script');
 
 PercyScript.run(async (page, percySnapshot) => {
   await page.goto(process.env.DEPLOY_URL);
