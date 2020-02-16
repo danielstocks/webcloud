@@ -23,6 +23,13 @@ class MyHead extends Head {
   }
 }
 
+export class MyMain extends Main {
+  render() {
+    const { html } = this.context._documentProps
+    return <div dangerouslySetInnerHTML={{ __html: html }} />
+  }
+}
+
 export default class extends Document {
   static async getInitialProps(ctx) {
     const renderer = createRenderer();
@@ -89,7 +96,7 @@ export default class extends Document {
           <script dangerouslySetInnerHTML={{ __html: clientSideJs }} />
         </MyHead>
         <body>
-          <Main />
+          <MyMain />
           <script async defer src="https://sa.webcloud.se/app.js" />
           <noscript>
             <img src="https://sa.webcloud.se/image.gif" alt="" />

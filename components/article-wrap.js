@@ -29,7 +29,7 @@ const Avatar = createComponentWithProxy(
 
 const TWEET = "https://twitter.com/intent/tweet?text=";
 
-export const ArticleWrap = ({ title, children }) => {
+export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
   const router = useRouter();
   return (
     <Wrap>
@@ -37,7 +37,7 @@ export const ArticleWrap = ({ title, children }) => {
         <title>{title} - webcloud</title>
       </Head>
       <BackToBase />
-      {children}
+      <Flex as="main">{children}</Flex>
       <Spacer size={6} />
       <SocialLink
         target="_blank"
@@ -68,6 +68,33 @@ export const ArticleWrap = ({ title, children }) => {
           </Paragraph>
         </Flex>
       </Card>
+      <Spacer size={8} />
+      <Title variant="apple">Read more articles written by me:</Title>
+      <Spacer size={2} />
+      <Flex
+        extend={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-between"
+        }}
+      >
+        {prevPost && (
+          <>
+            <Flex>
+              <Spacer size={3} />
+              <Link href={prevPost.path}>← {prevPost.title}</Link>
+            </Flex>
+            <Spacer size={2} />
+          </>
+        )}
+        {nextPost && (
+        <Flex>
+          <Spacer size={3} />
+          <Link href={nextPost.path}>{nextPost.title} →</Link>
+        </Flex>
+        )}
+      </Flex>
+
       <Spacer size={14} />
     </Wrap>
   );
