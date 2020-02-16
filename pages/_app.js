@@ -20,8 +20,13 @@ class MyApp extends App {
     const path = this.props.router.pathname;
     const type = path.split("/")[1];
     let post = false;
+    let nextPost = false;
+    let prevPost = false;
+
     if (type === "blog") {
       post = blogPosts.filter(post => post.path == path)[0];
+      prevPost = blogPosts[blogPosts.indexOf(post) + 1];
+      nextPost = blogPosts[blogPosts.indexOf(post) - 1];
     }
 
     return (
@@ -29,7 +34,14 @@ class MyApp extends App {
         components={{
           ...components,
           wrapper: function MdxWrapper({ ...props }) {
-            return <ArticleWrap title={post.title} {...props} />;
+            return (
+              <ArticleWrap
+                title={post.title}
+                nextPost={nextPost}
+                prevPost={prevPost}
+                {...props}
+              />
+            );
           },
           h1: function BlogTitle() {
             return (

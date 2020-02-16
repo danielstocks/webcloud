@@ -1,10 +1,9 @@
 ## Backlog
 
-- Next/Prev Article.
-- Redirect WWW to root domain
 - Disable dark theme for CV Print mode.
 - Collapse widget for Job sections in CV
 - Style guide
+- Estimated article read time
 - Projects Link list
 - Experiments Link list
 - Improve Lighthouse CI workflow to only run tests against pages that have changed
