@@ -14,7 +14,7 @@ import { Quote } from "../components/quote";
 const Span = createComponentWithProxy({}, "span");
 const Strong = createComponentWithProxy(
   {
-    fontWeight: "500",
+    fontWeight: "var(--font-weight-bold)",
     color: "var(--color-fg)"
   },
   "strong"

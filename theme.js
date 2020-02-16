@@ -18,7 +18,7 @@ export const themes = {
     "color-code-operator": "#e6a3cb",
     "font-weight-light" : "200",
     "font-weight-normal" : "400",
-    "font-weight-bold" : "500",
+    "font-weight-bold" : "600",
     "shadow": "4px 4px 0px rgba(125,125,125,0.2)",
   },
   dark: {

@@ -61,9 +61,10 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           <Title variant="kiwi">Hi, thanks for reading!</Title>
           <Spacer size={2} />
           <Paragraph extend={{ color: "var(--color-fg-alt)" }}>
-            I&rsquo;m Daniel, Software Engineer from Sweden. This is my personal{" "}
-            <Link href="/">website</Link>. You can also find me on{""}{" "}
-            <Link href="https://twitter.com/roflwtfbbq">Twitter</Link> and{" "}
+            I&rsquo;m Daniel, Software Engineer from Sweden. If you have any
+            questions regarding this article please reach out to me on{" "}
+            <Link href="https://twitter.com/roflwtfbbq">Twitter</Link>. You can
+            also find me on{" "}
             <Link href="https://github.com/danielstocks">GitHub</Link>.
           </Paragraph>
         </Flex>
@@ -88,10 +89,10 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           </>
         )}
         {nextPost && (
-        <Flex>
-          <Spacer size={3} />
-          <Link href={nextPost.path}>{nextPost.title} →</Link>
-        </Flex>
+          <Flex>
+            <Spacer size={3} />
+            <Link href={nextPost.path}>{nextPost.title} →</Link>
+          </Flex>
         )}
       </Flex>
 

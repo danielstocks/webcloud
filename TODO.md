@@ -5,6 +5,7 @@
 - Style guide
 - Estimated article read time
 - Projects Link list
+- Update code theme: https://github.com/sdras/night-owl-vscode-theme
 - Experiments Link list
 - Improve Lighthouse CI workflow to only run tests against pages that have changed
     - static HTML diff master VS feature branch
