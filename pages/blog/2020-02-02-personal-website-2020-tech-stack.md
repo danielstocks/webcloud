@@ -109,7 +109,7 @@ One really powerful concept that most static site hosting providers now offer ou
 
 One really cool thing with Zeit Now is that you get **preview deploys** out of the box. Open a pull request and the changes will be deployed in a production like environment.
 
-I was able to leverage GitHub Actions to run Lighthouse Performance and QA tests, as well as Percy visual regression tests against previews deploys in pull requests. This gives me A LOT of confidence that I wont merge anything that will degrade the quality of the site.
+I was able to leverage GitHub Actions to run Lighthouse Performance and QA tests, as well as Percy visual regression [tests against previews deploys](/blog/2020-02-16-github-actions-preview-deploys) in pull requests. This gives me A LOT of confidence that I wont merge anything that will degrade the quality of the site.
 
 
 ## Long term maintenance
