@@ -27,7 +27,7 @@ const ArticleGroup = ({ year, children }) => (
       }}
     >
       <Paragraph>{year}</Paragraph>
-      <Flex>
+      <Flex extend={{ fontWeight: "var(--font-weight-normal)" }}>
         {React.Children.toArray(children).map((article, i) => (
           <React.Fragment key={year + i}>
             <div>{article}</div>
@@ -80,9 +80,11 @@ const Home = () => (
         .sort()
         .reverse()
         .map((year, i) => (
-          <ArticleGroup key={year+i} year={year}>
+          <ArticleGroup key={year + i} year={year}>
             {blogPostsGroupedByYear[year].map(post => (
-              <Link key={post.path} href={post.path}>{post.title}</Link>
+              <Link key={post.path} href={post.path}>
+                {post.title}
+              </Link>
             ))}
           </ArticleGroup>
         ))}

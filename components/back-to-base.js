@@ -6,6 +6,7 @@ import { createComponentWithProxy } from "react-fela";
 const HideOnPrint = createComponentWithProxy(
   {
     display: "flex",
+    fontWeight: "var(--font-weight-normal)",
     flexDirection: "column",
     "@media print": {
       display: "none"
