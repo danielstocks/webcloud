@@ -1,9 +1,9 @@
 # Typography and Spacing in Software
 
----
+![Two ways of spacing typography](/type-spacing.png)
 
 <Intro>
-For as long as I've been working with Software UI, the biggest source of inconsistancy between design layout specification and software implementation is the interpretation of margins around typographic elements. Why is this? And how can we mitigate it?
+For as long as I've been working with Software UI, the biggest source of inconsistency between design layout specification and software implementation is the interpretation of margins around typographic elements. Why is this? And how can we mitigate it?
 </Intro>
 
 Given the importance of typography in software, one would instinctively think this to be a solved problem. Surely there is an established best practice here? I've been somewhat aware of the issue but also been too lazy to properly dissect it. However, as part of my current job I'm creating a Design System that will be used by many people. I can no longer afford to ignore it.
@@ -11,7 +11,7 @@ Given the importance of typography in software, one would instinctively think th
 
 ## Design and software divide
 
-I've rummaged the interwebz for answers, and my conclusion is that there is still a knowledge gap between design and engineering. It goes both ways. Designers coming from a background in print design/advertising with a lack of understanding of the dynamic/unctrollable nature of typograpghy in software products. Software engineers with a lack of understanding about design and core typography concepts, making the assumption that is already a solved problem.
+I've rummaged the interwebz for answers, and my conclusion is that there is still a knowledge gap between design and engineering. It goes both ways. Designers coming from a background in print design/advertising with a lack of understanding of the dynamic nature of typography in software. Likewise, software engineers with a lack of understanding about design and core typography concepts, making the assumption that is already a solved problem.
 
 
 ## Crash course in typographic terminology
@@ -22,11 +22,8 @@ Baseline
 Cap Height
 Languages / Writing modes
 
+
 ## The problem
-
-
-
-
 
 ### The bounding box dilemma
 
@@ -58,6 +55,6 @@ figma auto layout
 
 ## Solutions
 
-l### Removing the negative space
+### Removing the negative space
 
 
