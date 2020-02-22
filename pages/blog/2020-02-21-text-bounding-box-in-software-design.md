@@ -1,10 +1,32 @@
-# Typography and Spacing in Software
+# The Deceptively Complex Nature of Consistent Spacing in Typography
 
-![Two ways of spacing typography](/type-spacing.png)
+![Two ways of spacing typography](/spacing-type.png)
 
 <Intro>
-For as long as I've been working with Software UI, the biggest source of inconsistency between design layout specification and software implementation is the interpretation of margins around typographic elements. Why is this? And how can we mitigate it?
+As a Software Engineer I feel there is a lot of misinterpretation and friction in conversations around typography and spacing. This article explores creating a unified language to create typographic harmony and consistency in the context of UI Software Design.
 </Intro>
+
+In this article we will attempt to narrow the knowledge gap between designers and software engineers.
+
+
+## What is the problem?
+
+The way that most projects are organized is typically that a product is designed in a tool like Photoshop, Sketch or Figma, and then interpreted/implemented by a Software Engineer into Web, Andorid iOS.
+
+From the perspective of a Software Engineer, imagine your being handed over the following design specification:
+
+
+-- Image of design spec --
+
+## The bounding box
+
+- Illustration that shows how it's affected by font size.
+- Ilustration that shows characters that use the full bounding box (eg. chinese)
+
+
+<!--
+
+A unified language between designers and developers, where we use the same points of reference to create space around typographic components.
 
 Given the importance of typography in software, one would instinctively think this to be a solved problem. Surely there is an established best practice here? I've been somewhat aware of the issue but also been too lazy to properly dissect it. However, as part of my current job I'm creating a Design System that will be used by many people. I can no longer afford to ignore it.
 
@@ -56,5 +78,6 @@ figma auto layout
 ## Solutions
 
 ### Removing the negative space
+-->
 
 
