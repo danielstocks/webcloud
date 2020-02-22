@@ -26,7 +26,7 @@ const ArticleGroup = ({ year, children }) => (
         justifyContent: "space-between"
       }}
     >
-      <Paragraph>{year}</Paragraph>
+      <Paragraph extend={{ paddingLeft: "8px" }}>{year}</Paragraph>
       <Flex extend={{ fontWeight: "var(--font-weight-normal)" }}>
         {React.Children.toArray(children).map((article, i) => (
           <React.Fragment key={year + i}>
