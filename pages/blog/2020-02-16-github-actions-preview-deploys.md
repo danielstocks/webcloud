@@ -1,6 +1,6 @@
 # Running GitHub Actions on Preview Deploys
 
-![GitHub Deploy Action PR checks](/github-deploy-action.jpg)
+![GitHub Deploy Action PR checks](/github-deploy-action.png)
 
 <Intro>
 Ever wanted to run CI/CD tools like Lighthouse or Visual Regression tests against a PR preview deploy using GitHub actions? This is how I did it.
