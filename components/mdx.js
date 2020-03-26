@@ -61,7 +61,7 @@ export const components = {
     return (
       <>
         <List {...props} />
-        <Spacer size={2} />
+        <Spacer size={4} />
       </>
     );
   },
@@ -69,7 +69,7 @@ export const components = {
     return (
       <>
         <List as="ol" {...props} />
-        <Spacer size={2} />
+        <Spacer size={4} />
       </>
     );
   },
@@ -86,6 +86,24 @@ export const components = {
       <>
         <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
         <Spacer size={2} />
+      </>
+    );
+  },
+  Disclaimer: function SponsoredParagraph({ ...props }) {
+    return (
+      <>
+        <Spacer size={2} />
+        <Paragraph
+          extend={{
+            fontSize: "12px",
+            lineHeight: 1.6,
+            fontStyle: "italic",
+            opacity: 0.5,
+            color: "var(--color-fg-alt)"
+          }}
+          {...props}
+        />
+        <Spacer size={4} />
       </>
     );
   },
