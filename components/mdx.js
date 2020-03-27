@@ -89,7 +89,7 @@ export const components = {
       </>
     );
   },
-  Disclaimer: function SponsoredParagraph({ ...props }) {
+  Disclaimer: function Disclaimer({ ...props }) {
     return (
       <>
         <Spacer size={2} />
