@@ -5,7 +5,7 @@ const toggleTheme = () => ({
   border: "none",
   display: "none",
   cursor: "pointer",
-  position: "absolute",
+  position: "fixed",
   fontSize: "12px",
   lineHeight: "1",
   fontWeight: "400",

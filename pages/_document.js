@@ -1,7 +1,7 @@
 import React from "react";
 import Document, { Main, Head } from "next/document";
-import { createRenderer } from "fela";
 import { RendererProvider, renderToNodeList } from "react-fela";
+import { getRenderer } from "../fela.config.js";
 import { themes } from "../theme";
 import fs from "fs";
 var UglifyJS = require("uglify-js");
@@ -25,46 +25,15 @@ class MyHead extends Head {
 
 export class MyMain extends Main {
   render() {
-    const { html } = this.context._documentProps
-    return <div dangerouslySetInnerHTML={{ __html: html }} />
+    const { html } = this.context._documentProps;
+    return <div dangerouslySetInnerHTML={{ __html: html }} />;
   }
 }
 
 export default class extends Document {
   static async getInitialProps(ctx) {
-    const renderer = createRenderer();
-
-    const theme = themes["light"];
-    const cssVariables = {};
-    Object.keys(theme).forEach(key => {
-      cssVariables["--" + key] = theme[key];
-    });
-
-    renderer.renderStatic(cssVariables, ":root");
-
-    renderer.renderStatic(
-      {
-        background: "var(--color-bg)",
-        color: "var(--color-fg)",
-        fontSize: "16px",
-        transition: "all 0.2s ease-in",
-        lineHeight: 1,
-        fontFamily:
-          'system-ui, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif'
-      },
-      "body"
-    );
-
-    renderer.renderStatic(
-      {
-        margin: "0",
-        padding: "0"
-      },
-      "*"
-    );
-
+    const renderer = getRenderer();
     const originalRenderPage = ctx.renderPage;
-
     ctx.renderPage = () =>
       originalRenderPage({
         enhanceApp: App => props => (
@@ -73,9 +42,7 @@ export default class extends Document {
           </RendererProvider>
         )
       });
-
     const initialProps = await Document.getInitialProps(ctx);
-
     return { ...initialProps, renderer };
   }
 
