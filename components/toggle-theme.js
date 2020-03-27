@@ -3,6 +3,7 @@ import { createComponentWithProxy } from "react-fela";
 const toggleTheme = () => ({
   padding: "8px 12px",
   border: "none",
+  zIndex: 1,
   display: "none",
   cursor: "pointer",
   position: "fixed",

@@ -78,7 +78,7 @@ class MyHead extends Head {
 }
 ```
 
-### Custom a Custom Main Component
+### Create a Custom Main Component
 
 This is not really necceary but to satisfy my mild OCD I wanted to get rid of the `<div id="next">` wrapper around my content.
 
