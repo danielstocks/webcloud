@@ -140,7 +140,7 @@ With this bare bone setup we get the following HTML output:
 </html>
 ```
 
-The end result is pretty cool. I get a HTML page that is server-side rendered with React, generated from a Markdown file. Things like code syntax highlighting is done on the server, so need need for a client-side runtime.
+The end result is pretty cool: I get a HTML page that is server-side rendered with React, generated from a Markdown file. Things like code syntax highlighting is done on the server, so no need for a client-side runtime.
 
 I'm using [Fela](http://fela.js.org/) for CSS-in-JS so that the critical amount of CSS needed to render a specific page is inline directly in the head. This means a HTML page that is entirely self-contained, no external CSS or JavaScript files required, only a single request!
 
