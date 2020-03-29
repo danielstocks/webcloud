@@ -1,4 +1,4 @@
-# Server Side Only React with Next
+# Server-side Only React with Next
 
 ---
 
@@ -8,7 +8,7 @@ A commonly heard critique of React is that it's a heavy handed or over-engineere
 
 You know that feeling you get sometimes that *the web* is broken?
 
-You visit a seemingly simple website with little or no interactivity, yet somehow it sends you 2 MB of JavaScript to digest. You're half way down the article that you're reading and suddenly: client-side rendering kicks in, resets everything. You try to find your way back but the page is now janking around. Your mobile device is brought to a crawl and behaving like it's taking its last dying breath. You end up rage quitting and screaming: THE WEB IS BROKEN, as your colleagues look worringly in your direction.
+You visit a seemingly simple website with little or no interactivity, yet somehow it sends you 2 MB of JavaScript to digest. You're half way down the article that you're reading and suddenly: client-side rendering kicks in, resets everything. You try to find your way back but the page is now janking around. Your mobile device is brought to a crawl and behaving like it's taking its last dying breath. You end up rage quitting and screaming: THE WEB IS BROKEN, as your colleagues look worryingly in your direction.
 
 
 [![Netflix talk React SSR](/netflix-react-ssr.jpg "The UI Engineers over at Netflix created a Twitter storm while doing similar experiments back in 2017, but for slightly other purposes than mine.")](https://twitter.com/NetflixUIE/status/923374215041912833)
