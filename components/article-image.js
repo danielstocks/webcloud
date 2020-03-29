@@ -22,10 +22,12 @@ export const ArticleImage = ({ ...props }) => (
       margin: "24px 0",
       display: "block",
       ":after": {
-        top: "4px",
+        top: "12px",
         position: "relative",
         content: "attr(data-title)",
         fontSize: "12px",
+        display: "block",
+        lineHeight: "18px",
         color: "var(--color-fg-alt)",
         fontStyle: "italic"
       }
