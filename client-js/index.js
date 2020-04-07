@@ -1,12 +1,17 @@
 // Note: Use ES5 compatible JS here
 var root = document.documentElement.style;
 var matcher = window.matchMedia("(prefers-color-scheme: dark)");
-var userPreference = matcher.matches ? "dark" : "light";
 var light = "light";
 var dark = "dark";
-var currentTheme =
-  window.localStorage.getItem("current-theme") || userPreference;
+var userPreference = matcher.matches ? dark : light;
 var button;
+var currentTheme;
+
+try {
+  currentTheme = window.localStorage.getItem("current-theme") || userPreference;
+} catch (e) {
+  console.warn("could not read theme from local storage");
+}
 
 if (currentTheme) {
   setTheme(currentTheme);
@@ -22,11 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
 matcher.addListener(function() {
   setTheme(matcher.matches ? dark : light);
   setButtonLabel();
-})
+});
 
 function setTheme(themeName) {
   // eslint-disable-next-line
   var theme = THEMES[themeName];
+  try {
+    window.localStorage.setItem("current-theme", themeName);
+  } catch (e) {
+    console.warn("could not persist theme choice");
+  }
   currentTheme = themeName;
   Object.keys(theme).forEach(function(key) {
     root.setProperty("--" + key, theme[key]);
@@ -34,14 +44,11 @@ function setTheme(themeName) {
 }
 
 function setButtonLabel() {
-  button.innerHTML = currentTheme === dark ? light : dark
+  button.innerHTML = currentTheme === dark ? light : dark;
 }
 
 function buttonClick() {
   var theme = currentTheme === light ? dark : light;
-  window.localStorage.setItem("current-theme", theme);
-  setButtonLabel(theme);
   setTheme(theme);
+  setButtonLabel(theme);
 }
-
-
