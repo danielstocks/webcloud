@@ -146,7 +146,7 @@ I'm using [Fela](http://fela.js.org/) for CSS-in-JS so that the critical amount 
 
 ### Bonus: Adding client-side JavaScript back in the mix
 
-OK I lied, this page is not entirely JavaScript free. You may have noticed that I have a dark/light theme switching button in the top right corner. To achieve this I've added roughly 0.5kB of render blocking JavaScript that detects the users OS color preference, and modified CSS global properties before the page is rendered. I will write an article about that soon!
+OK I lied, this page is not entirely JavaScript free. You may have noticed that I have a dark/light theme switching button in the top right corner. To achieve this I've added roughly 0.5kB of render blocking JavaScript that detects the users OS color preference, and modified CSS global properties before the page is rendered. I've written [another article](/blog/2020-04-06-flash-of-unstyled-dark-theme) about this.
 
 ### Bonus: Getting back that "SPA" feeling
 
