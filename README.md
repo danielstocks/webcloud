@@ -17,6 +17,8 @@ Here's a shortlist of tools, libraries and services used to build this website.
 - [Fela](http://fela.js.org/) - State-driven atomic CSS styling in JavaScript
 - [UglifyJS](http://lisperator.net/uglifyjs/) - Minifier for client-side ES5 vanilla JavaScript code
 - [Prism](https://prismjs.com/) & [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) - Syntax highlighting for code examples
+- [instant.page](https://instant.page/) - Uses just-in-time preloading — it preloads a page right before a user clicks on it.
+
 
 
 ### CI/CD
@@ -34,3 +36,4 @@ Here's a shortlist of tools, libraries and services used to build this website.
 ### Misc
 
 - [Simple Analytics](https://simpleanalytics.com/) - Like Google Analytics, but simple
+
