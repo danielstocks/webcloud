@@ -26,7 +26,7 @@ const toggleTheme = () => ({
     transform: "translate(4px,4px)"
   },
   "@media print": {
-    display: "none"
+    display: "none!important"
   }
 });
 

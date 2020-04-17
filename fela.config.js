@@ -11,6 +11,15 @@ export function getRenderer() {
   });
 
   renderer.renderStatic(cssVariables, ":root");
+  renderer.renderStatic(`
+    @media print {
+      :root {
+        ${Object.keys(theme)
+          .map(key => "--" + key + ":" + theme[key] + "!important;")
+          .join("")}
+      }
+    }
+  `);
 
   renderer.renderStatic(
     {
