@@ -29,6 +29,7 @@ const CV = () => (
     </Head>
     <BackToBase />
     <Flex as="header">
+      <Spacer size={4} />
       <Title>CV - Daniel Stocks</Title>
       <Spacer size={6} />
       <Title variant="kiwi">
@@ -37,7 +38,17 @@ const CV = () => (
         design systems to scale UX & UI across platforms.
       </Title>
       <Spacer size={6} />
-      <Card extend={{ width: "100%", marginLeft: "-16px" }}>
+      <Card
+        extend={{
+          width: "100%",
+          marginLeft: "-16px",
+          "@media print": {
+            padding: 0,
+            margin: 0,
+            boxShadow: "none!important"
+          }
+        }}
+      >
         <SocialLink href="mailto:daniel@webcloud.se">
           <Email />
           <Spacer size={2} />
@@ -78,11 +89,15 @@ const CV = () => (
       </Paragraph>
     </Flex>
 
-    <Spacer size={8} />
+    <Spacer size={6} />
+    <Spacer
+      size={4}
+      extend={{ pageBreakBefore: "always" }}
+    />
 
     <Flex as="main">
       <Title variant="pear">Job Experience</Title>
-      <Spacer size={8} />
+      <Spacer size={6} />
       <Job>
         <JobTitle>Staff Software Engineer</JobTitle>
         <JobCompany>Volvo Cars</JobCompany>
@@ -280,6 +295,11 @@ const CV = () => (
     </Flex>
 
     <Spacer size={6} />
+    <Spacer
+      size={4}
+      extend={{ pageBreakBefore: "always" }}
+    />
+
     <Title variant="pear">Other Experience</Title>
     <Spacer size={6} />
 

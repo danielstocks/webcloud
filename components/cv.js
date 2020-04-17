@@ -3,8 +3,14 @@ import { createComponent } from "react-fela";
 import { Paragraph } from "../components/paragraph";
 import { Flex } from "../components/flex";
 import { Spacer } from "../components/spacer";
+
 export const Job = createComponent(
-  { display: "flex", flexDirection: "column", marginBottom: "24px" },
+  {
+    display: "flex",
+    pageBreakInside: "avoid",
+    flexDirection: "column",
+    paddingTop: "24px"
+  },
   "div"
 );
 export const JobTitle = createComponent(
@@ -17,7 +23,7 @@ export const JobCompany = createComponent(
     fontSize: "16px",
     fontWeight: 500
   },
-  "div"
+  "span"
 );
 export const JobDuration = createComponent({}, "span");
 
@@ -27,6 +33,7 @@ export const JobMeta = ({ children }) => (
   <Flex
     extend={{
       fontSize: "12px",
+      display: "block",
       fontWeight: 500,
       flexDirection: "row",
       color: "var(--color-fg-alt)",
@@ -39,9 +46,7 @@ export const JobMeta = ({ children }) => (
       <React.Fragment key={i}>
         {i !== 0 && (
           <>
-            <Spacer />
-            {"|"}
-            <Spacer />
+            &nbsp;{"|"}&nbsp;
           </>
         )}
         {item}
@@ -75,7 +80,7 @@ export const SocialLink = ({ children, ...props }) => (
       },
       "&:hover svg": {
         opacity: 1,
-        transition: "all 0.2s ease-in-out",
+        transition: "all 0.2s ease-in-out"
       },
       "&:hover span": {
         color: "var(--color-fg)"
