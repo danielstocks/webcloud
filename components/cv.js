@@ -1,18 +1,60 @@
 import React from "react";
-import { createComponent } from "react-fela";
+import { createComponent, createComponentWithProxy } from "react-fela";
 import { Paragraph } from "../components/paragraph";
 import { Flex } from "../components/flex";
 import { Spacer } from "../components/spacer";
 
-export const Job = createComponent(
+export const Job = createComponentWithProxy(
   {
     display: "flex",
     pageBreakInside: "avoid",
     flexDirection: "column",
-    paddingTop: "24px"
+    paddingTop: "24px",
+    "@media not print": {
+      "[open] summary:before": {
+        content: "'-'"
+      }
+    }
   },
-  "div"
+  "details"
 );
+
+export const JobSummary = createComponent(
+  {
+    display: "flex",
+    flexDirection: "column",
+    paddingBottom: "16px",
+    paddingLeft: 0,
+    marginBottom: "16px",
+    borderBottom: "1px solid var(--color-border)",
+    position: "relative",
+    listStyle: "none",
+    "::-webkit-details-marker": {
+      display: "none"
+    },
+    "@media not print": {
+      ":before": {
+        top: "50%",
+        transform: "translateY(-50%)",
+        fontSize: "24px",
+        fontWeight: "200",
+        position: "absolute",
+        right: "16px",
+        color: "var(--color-primary)",
+        content: "'+'"
+      },
+      ":hover": {
+        cursor: "pointer",
+        borderBottom: "1px solid var(--color-fg)",
+        ":before": {
+          color: "var(--color-fg)"
+        }
+      }
+    },
+  },
+  "summary"
+);
+
 export const JobTitle = createComponent(
   { fontSize: "24px", fontWeight: 200, marginBottom: "16px" },
   "div"
@@ -36,19 +78,12 @@ export const JobMeta = ({ children }) => (
       display: "block",
       fontWeight: 500,
       flexDirection: "row",
-      color: "var(--color-fg-alt)",
-      marginBottom: "16px",
-      paddingBottom: "16px",
-      borderBottom: "1px solid var(--color-border)"
+      color: "var(--color-fg-alt)"
     }}
   >
     {React.Children.toArray(children).map((item, i) => (
       <React.Fragment key={i}>
-        {i !== 0 && (
-          <>
-            &nbsp;{"|"}&nbsp;
-          </>
-        )}
+        {i !== 0 && <>&nbsp;{"|"}&nbsp;</>}
         {item}
       </React.Fragment>
     ))}

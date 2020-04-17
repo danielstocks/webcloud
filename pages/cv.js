@@ -13,6 +13,7 @@ import { Github, Linkedin, Twitter, Email } from "../components/social-icons";
 import { BackToBase } from "../components/back-to-base";
 import {
   Job,
+  JobSummary,
   JobTitle,
   JobMeta,
   JobCompany,
@@ -90,21 +91,20 @@ const CV = () => (
     </Flex>
 
     <Spacer size={6} />
-    <Spacer
-      size={4}
-      extend={{ pageBreakBefore: "always" }}
-    />
+    <Spacer size={4} extend={{ pageBreakBefore: "always" }} />
 
     <Flex as="main">
       <Title variant="pear">Job Experience</Title>
       <Spacer size={6} />
-      <Job>
-        <JobTitle>Staff Software Engineer</JobTitle>
-        <JobCompany>Volvo Cars</JobCompany>
-        <JobMeta>
-          <JobDuration>January 2019 - Present</JobDuration>
-          <JobLocation>Stockholm, Sweden</JobLocation>
-        </JobMeta>
+      <Job open>
+        <JobSummary>
+          <JobTitle>Staff Software Engineer</JobTitle>
+          <JobCompany>Volvo Cars</JobCompany>
+          <JobMeta>
+            <JobDuration>January 2019 - Present</JobDuration>
+            <JobLocation>Stockholm, Sweden</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             Providing company-wide technical leadership and guidance within the
@@ -138,12 +138,14 @@ const CV = () => (
       </Job>
 
       <Job>
-        <JobTitle>CTO</JobTitle>
-        <JobCompany>Carvanro</JobCompany>
-        <JobMeta>
-          <JobDuration>Feburary 2016 - March 2018</JobDuration>
-          <JobLocation>London, UK and Tehran, Iran</JobLocation>
-        </JobMeta>
+        <JobSummary>
+          <JobTitle>CTO</JobTitle>
+          <JobCompany>Carvanro</JobCompany>
+          <JobMeta>
+            <JobDuration>Feburary 2016 - March 2018</JobDuration>
+            <JobLocation>London, UK and Tehran, Iran</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             Building a peer to peer ride-sharing platform to enable more
@@ -174,14 +176,16 @@ const CV = () => (
       </Job>
 
       <Job>
-        <JobTitle>Solutions Architect</JobTitle>
-        <JobCompany>Evil Enterprise</JobCompany>
-        <JobMeta>
-          <JobDuration>
-            September 2013 - December 2015, March 2018 - December 2018
-          </JobDuration>
-          <JobLocation>All over the place</JobLocation>
-        </JobMeta>
+        <JobSummary>
+          <JobTitle>Solutions Architect</JobTitle>
+          <JobCompany>Evil Enterprise</JobCompany>
+          <JobMeta>
+            <JobDuration>
+              September 2013 - December 2018
+            </JobDuration>
+            <JobLocation>All over the place</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             Running my own consultancy agency. Helping clients solve problems
@@ -206,12 +210,14 @@ const CV = () => (
       </Job>
 
       <Job>
-        <JobTitle>Lead Front-End Developer</JobTitle>
-        <JobCompany>Saltside</JobCompany>
-        <JobMeta>
-          <JobDuration>August 2011 - September 2013</JobDuration>
-          <JobLocation>Gothenburg, Sweden</JobLocation>
-        </JobMeta>
+        <JobSummary>
+          <JobTitle>Lead Front-End Developer</JobTitle>
+          <JobCompany>Saltside</JobCompany>
+          <JobMeta>
+            <JobDuration>August 2011 - September 2013</JobDuration>
+            <JobLocation>Gothenburg, Sweden</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             Saltside builds online marketplaces (classifieds) in emerging
@@ -234,12 +240,14 @@ const CV = () => (
       </Job>
 
       <Job>
-        <JobTitle>Front-End Developer</JobTitle>
-        <JobCompany>Aino</JobCompany>
-        <JobMeta>
-          <JobDuration>June 2009 - August 2011</JobDuration>
-          <JobLocation>Gothenburg, Sweden</JobLocation>
-        </JobMeta>
+        <JobSummary>
+          <JobTitle>Front-End Developer</JobTitle>
+          <JobCompany>Aino</JobCompany>
+          <JobMeta>
+            <JobDuration>June 2009 - August 2011</JobDuration>
+            <JobLocation>Gothenburg, Sweden</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             Aino is a leading web agency collaborating with some of the biggest
@@ -268,12 +276,14 @@ const CV = () => (
       </Job>
 
       <Job>
-        <JobTitle>Front-End Developer Intern</JobTitle>
-        <JobCompany>NetRelations</JobCompany>
-        <JobMeta>
-          <JobDuration>April 2008 - August 2008</JobDuration>
-          <JobLocation>Gothenburg, Sweden</JobLocation>
-        </JobMeta>
+        <JobSummary>
+          <JobTitle>Front-End Developer Intern</JobTitle>
+          <JobCompany>NetRelations</JobCompany>
+          <JobMeta>
+            <JobDuration>April 2008 - August 2008</JobDuration>
+            <JobLocation>Gothenburg, Sweden</JobLocation>
+          </JobMeta>
+        </JobSummary>
         <JobDescription>
           <Paragraph>
             As an intern at NetRelations I learned about the importance of
@@ -295,21 +305,20 @@ const CV = () => (
     </Flex>
 
     <Spacer size={6} />
-    <Spacer
-      size={4}
-      extend={{ pageBreakBefore: "always" }}
-    />
+    <Spacer size={4} extend={{ pageBreakBefore: "always" }} />
 
     <Title variant="pear">Other Experience</Title>
     <Spacer size={6} />
 
     <Job>
-      <JobTitle>Founder And Coordinator</JobTitle>
-      <JobCompany>Taket</JobCompany>
-      <JobMeta>
-        <JobDuration>April 2008 - August 2008</JobDuration>
-        <JobLocation>Gothenburg, Sweden</JobLocation>
-      </JobMeta>
+      <JobSummary>
+        <JobTitle>Founder And Coordinator</JobTitle>
+        <JobCompany>Taket</JobCompany>
+        <JobMeta>
+          <JobDuration>April 2008 - August 2008</JobDuration>
+          <JobLocation>Gothenburg, Sweden</JobLocation>
+        </JobMeta>
+      </JobSummary>
       <JobDescription>
         <Paragraph>
           Co-founded a co-working place in the heart of Gothenburg for artists,
@@ -325,12 +334,14 @@ const CV = () => (
     <Spacer size={6} />
 
     <Job>
-      <JobTitle>Webbutvecklare</JobTitle>
-      <JobCompany>Yrgo</JobCompany>
-      <JobMeta>
-        <JobDuration>2007 – 2009</JobDuration>
-        <JobLocation>Gothenburg, Sweden</JobLocation>
-      </JobMeta>
+      <JobSummary>
+        <JobTitle>Webbutvecklare</JobTitle>
+        <JobCompany>Yrgo</JobCompany>
+        <JobMeta>
+          <JobDuration>2007 – 2009</JobDuration>
+          <JobLocation>Gothenburg, Sweden</JobLocation>
+        </JobMeta>
+      </JobSummary>
       <JobDescription>
         <Paragraph>Yrkeshögskoleutbildning, 400 YH-poäng.</Paragraph>
         <Paragraph>

@@ -19,6 +19,12 @@
     setTheme(currentTheme);
   }
 
+  /* Open all <details> elements for print/PDF export */
+  window.addEventListener("beforeprint", function() {
+    var details = document.querySelectorAll("details");
+    details.forEach(function(detail) { detail.open = true })
+  });
+
   document.addEventListener("DOMContentLoaded", function() {
     button = document.querySelector("#toggle-theme");
     setButtonLabel();
