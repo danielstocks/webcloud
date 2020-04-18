@@ -30,7 +30,9 @@ const listPosts = () => {
       date: getDateFromFileName(title),
       path: `/blog/${title}`
     }))
-    .sort((a, b) => b.sortOrder - a.sortOrder);
+    .sort((a, b) => {
+      return parseInt(a.date.replace(/\-/g,"")) - parseInt(b.date.replace(/\-/g,""))
+    });
 };
 
 const output = listPosts().reverse();
