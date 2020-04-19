@@ -13,7 +13,6 @@ const codeBlock = {
   overflowX: "auto",
   position: "relative",
   marginLeft: "-16px",
-  marginTop: "16px",
   marginBottom: "32px"
 };
 const CodeBlock = createComponentWithProxy(codeBlock, "div");

@@ -28,7 +28,7 @@ const Intro = ({ ...props }) => (
 const p = ({ ...props }) => (
   <>
     <Paragraph extend={{ color: "var(--color-fg-alt)" }} {...props} />
-    <Spacer size={2} />
+    <Spacer size={4} />
   </>
 );
 
@@ -45,7 +45,7 @@ export const components = {
   h3: function H3({ ...props }) {
     return (
       <>
-        <Spacer size={5} />
+        <Spacer size={4} />
         <Title as="h3" variant="apple" {...props} />
         <Spacer size={3} />
       </>
