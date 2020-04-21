@@ -92,7 +92,7 @@ Also Worth mentioning is that I'm using `upload.target=temporary-public-storage`
 
 ## Full Example #2 - Percy Visual Regression Tests
 
-I'm using [Percy](percy.io/) to run and store my visual regressions tests. This workflow will take snapshots and compare them to the latest approved version on the master branch.
+I'm using [Percy](https://percy.io/) to run and store my visual regressions tests. This workflow will take snapshots and compare them to the latest approved version on the master branch.
 
 ```yaml
 name: Visual Regression Test
