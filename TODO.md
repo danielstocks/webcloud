@@ -9,8 +9,8 @@
 - Curated Link List
 - RSS Feed for articles and link list
 - Add "Projects" section
- -- web audio ir mixer
- -- Lizard
- -- jquery collapse
+  - web audio ir mixer
+  - Lizard
+  - jquery collapse
 - Add "Experiments" section
- -- Assortment
+  - Assortment
