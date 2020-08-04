@@ -8,3 +8,9 @@
 - Style Guide Page + Add Visual Regression Test /ui
 - Curated Link List
 - RSS Feed for articles and link list
+- Add "Projects" section
+ -- web audio ir mixer
+ -- Lizard
+ -- jquery collapse
+- Add "Experiments" section
+ -- Assortment
