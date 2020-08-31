@@ -25,11 +25,11 @@
   "rewrites": [
     {
       "source": "/jQuery-Collapse/(.*)",
-      "destination": "https://webcloud-jquery-collapse.netlify.com/$1"
+      "destination": "https://webcloud-jquery-collapse.netlify.app/$1"
     },
     {
       "source": "/Assortment/(.*)",
-      "destination": "https://webcloud-assortment.netlify.com/$1"
+      "destination": "https://webcloud-assortment.netlify.app/$1"
     }
   ]
 }
