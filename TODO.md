@@ -1,7 +1,7 @@
 ## Backlog
 
-- Rewrites on Vercel/Now are broken. Redirects instead.
 - Create a "tweet" component to replace screenshots from twitter.
+- Check 404 hits in analytics and create approriate redirects.
 - Send PR/Branch information to Percy and Lighthouse via Github Actions
   - Currently not sent in deployment_status event(?)
   - If I figure out how, update the GH actions preview deploy blog post
@@ -12,6 +12,6 @@
 - Add "Projects" section
   - web audio ir mixer
   - Lizard
-  - jquery collapse
+  - Jquery Collapse
 - Add "Experiments" section
   - Assortment
