@@ -1,5 +1,6 @@
 ## Backlog
 
+- Rewrites on Vercel/Now are broken. Redirects instead.
 - Create a "tweet" component to replace screenshots from twitter.
 - Send PR/Branch information to Percy and Lighthouse via Github Actions
   - Currently not sent in deployment_status event(?)
