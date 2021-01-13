@@ -1,0 +1,21 @@
+/*
+ What is this?
+ 
+ This is my personal collection of bookmarks and links of interesting articles that
+ I think are worth reading. 
+ */
+ 
+[
+  {
+		"title": "If it will matter after today, stop talking about it in a chat room",
+		"url": "https://critter.blog/2021/01/12/if-it-matters-after-today-stop-talking-about-it-in-a-chat-room/",
+		"bookmarked_at": "2021-01-13T08:10:23.287Z",
+		"tags": ["mgmt", "collaboration"]
+	},
+	{
+		"title": "What Silicon Valley \"Gets\" about Software Engineers that Traditional Companies Do Not",
+		"url": "https://blog.pragmaticengineer.com/what-silicon-valley-gets-right-on-software-engineers/",
+		"bookmarked_at": "2021-01-13T08:04:19.445Z",
+		"tags": ["mgmt"]
+	}
+]
