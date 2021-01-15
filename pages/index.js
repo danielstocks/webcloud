@@ -51,9 +51,8 @@ const Home = () => (
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm Daniel and this is my personal website. I currently{" "}
-        <Link href="/cv">work</Link> with UI Engineering & Design at{" "}
-        <Link href="https://www.volvocars.com">Volvo Cars</Link>. If you wish to
+        I'm Daniel and this is my personal website. I specialise in 
+        {" "}<Link href="/cv">working</Link> with UI Engineering & Digital Product Design. If you wish to
         get in touch please send an email to{" "}
         <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link>
         <br />

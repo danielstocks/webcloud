@@ -96,12 +96,28 @@ const CV = () => (
     <Flex as="main">
       <Title variant="pear">Job Experience</Title>
       <Spacer size={6} />
-      <Job open>
+      <Job>
+        <JobSummary>
+          <JobTitle>CTO</JobTitle>
+          <JobCompany>TBA</JobCompany>
+          <JobMeta>
+            <JobDuration>January 2021 - Present</JobDuration>
+            <JobLocation>TBA</JobLocation>
+          </JobMeta>
+        </JobSummary>
+        <JobDescription>
+          <Paragraph>
+            Starting a new adventure :) More on this soon!
+          </Paragraph>
+        </JobDescription>
+      </Job>
+
+      <Job>
         <JobSummary>
           <JobTitle>Staff Software Engineer</JobTitle>
           <JobCompany>Volvo Cars</JobCompany>
           <JobMeta>
-            <JobDuration>January 2019 - Present</JobDuration>
+            <JobDuration>January 2019 - December 2020</JobDuration>
             <JobLocation>Stockholm, Sweden</JobLocation>
           </JobMeta>
         </JobSummary>
@@ -351,7 +367,7 @@ const CV = () => (
       </JobDescription>
     </Job>
     <Spacer size={6} />
-  </Wrap>
+  </Wrap >
 );
 
 export default CV;
