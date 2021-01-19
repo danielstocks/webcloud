@@ -34,9 +34,7 @@ const CV = () => (
       <Title>CV - Daniel Stocks</Title>
       <Spacer size={6} />
       <Title variant="kiwi">
-        Hi, I'm Daniel, from Sweden. I'm currently working as a technical leader
-        at <Link href="https://www.volvocars.com/">Volvo Cars</Link> building
-        design systems to scale UX & UI across platforms.
+        Hi, I'm Daniel, from Sweden. This is my CV but I'm not currently looking for work.
       </Title>
       <Spacer size={6} />
       <Card
