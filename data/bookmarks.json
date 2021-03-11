@@ -7,21 +7,27 @@
  
 [
   {
+		"title": "The Feedback Fallacy",
+		"url": "https://hbr.org/2019/03/the-feedback-fallacy",
+		"bookmarked_at": "2021-03-11T18:37:00Z",
+		"tags": ["mgmt"]
+	},
+  {
 		"title": "Front-End Performance Checklist 2021",
 		"url": "https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/",
-		"bookmarked_at": "2021-01-14T08:59:00.255Z",
+		"bookmarked_at": "2021-01-14T08:59:00Z",
 		"tags": ["ux", "ui"]
 	},
   {
 		"title": "If it will matter after today, stop talking about it in a chat room",
 		"url": "https://critter.blog/2021/01/12/if-it-matters-after-today-stop-talking-about-it-in-a-chat-room/",
-		"bookmarked_at": "2021-01-13T08:10:23.287Z",
+		"bookmarked_at": "2021-01-13T08:10:23Z",
 		"tags": ["mgmt", "collaboration"]
 	},
 	{
 		"title": "What Silicon Valley \"Gets\" about Software Engineers that Traditional Companies Do Not",
 		"url": "https://blog.pragmaticengineer.com/what-silicon-valley-gets-right-on-software-engineers/",
-		"bookmarked_at": "2021-01-13T08:04:19.445Z",
+		"bookmarked_at": "2021-01-13T08:04:19Z",
 		"tags": ["mgmt"]
 	}
 ]
