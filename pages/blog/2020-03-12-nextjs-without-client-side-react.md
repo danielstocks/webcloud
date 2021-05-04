@@ -1,4 +1,4 @@
-# Server-side Only React with Next
+# Server-side Only React with Next.js
 
 ---
 
@@ -14,9 +14,9 @@ You visit a seemingly simple website with little or no interactivity, yet someho
 [![Netflix talk React SSR](/netflix-react-ssr.jpg "The UI Engineers over at Netflix created a Twitter storm while doing similar experiments back in 2017, but for purposes slightly other than mine.")](https://twitter.com/NetflixUIE/status/923374215041912833)
 
 
-In spite of all this, when I re-built my personal website (for the n:th time) I made the decision to use [React](https://reactjs.org/) and [Next](https://nextjs.org/)! Am I a hypocrite? (you decide for yourself).
+In spite of all this, when I re-built my personal website (for the n:th time) I made the decision to use [React](https://reactjs.org/) and [Next.js](https://nextjs.org/)! Am I a hypocrite? (you decide for yourself).
 
-## Why Next + React for a Blog?
+## Why Next.js + React for a Blog?
 
 Even if I didn't intend on using React on the client-side, I still wanted to use it on the server for the following reasons:
 
@@ -36,7 +36,7 @@ The other option I did consider was the plain vanilla ice-cream flavour. Simple,
 
 ## What's _Next?_
 
-Next is a multi-purpose React application framework, but for my purposes it's mainly a static site generation tool (comparable to Jekyll or Gatsby). It takes an input (Markdown in my case) and spits out a bunch of HTML files that are later deployed on a CDN. No server-side runtime required.
+[Next.js](http://nextjs.org) is a multi-purpose React application framework, but for my purposes it's mainly a static site generation tool (comparable to Jekyll or Gatsby). It takes an input (Markdown in my case) and spits out a bunch of HTML files that are later deployed on a CDN. No server-side runtime required.
 
 ### Next is great for universal websites
 
