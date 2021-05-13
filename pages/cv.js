@@ -100,12 +100,12 @@ const CV = () => (
           <JobCompany>TBA</JobCompany>
           <JobMeta>
             <JobDuration>January 2021 - Present</JobDuration>
-            <JobLocation>TBA</JobLocation>
+            <JobLocation>Remote, Sweden</JobLocation>
           </JobMeta>
         </JobSummary>
         <JobDescription>
           <Paragraph>
-            Starting a new adventure :) More on this soon!
+            Improving the online car buying and leasing experience for electrified vehicles
           </Paragraph>
         </JobDescription>
       </Job>
