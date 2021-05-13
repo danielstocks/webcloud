@@ -52,7 +52,7 @@ const Home = () => (
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
         I'm Daniel and this is my personal website. I <Link href="/cv">specialise</Link> in 
-        {" "} creating online digital products</Link>.
+        {" "} creating online digital products.
   
         I'm currently at work improving the <Link href="https://www.carla.se/">online car buying and leasing experience</Link> for electrified vehicles.{" "}
         If you wish to get in touch please send an email to{" "}
