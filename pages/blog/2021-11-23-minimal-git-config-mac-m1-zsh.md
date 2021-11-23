@@ -6,7 +6,7 @@
 This how I setup my Git configuration on a Mac M1 device with Zsh. A reference for my future self.
 </Intro>
 
-Since switching to an Mac M1 devicec earlier this year my [old dotfiles](https://github.com/danielstocks/dotfiles) didn't work anymore.
+Since switching to an Mac M1 device earlier this year my [old dotfiles](https://github.com/danielstocks/dotfiles) didn't work anymore.
 Apart from X86 => Arm, Mac OS also ships with Zsh as the default shell instead of Bash since a while back. Instead of attempting to migrate my entire setup I decided to use a vanilla configuration for a few months to really identify the annoynances of my daily git usage. Here's what I ended up really missing:
 
 ## User configuration
@@ -41,7 +41,7 @@ To verify that you've set it up correctly. Go into a git repository and type `gi
 
 ## Aliases
 
-In my `.zsrch` i a few simple git aliases, but that I type atleast 100 times per day:
+In my `.zshrc` i a few simple git aliases, but that I type atleast 100 times per day:
 
 ```sh
 alias gs="git status"
