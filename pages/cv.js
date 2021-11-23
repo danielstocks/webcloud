@@ -97,7 +97,7 @@ const CV = () => (
       <Job>
         <JobSummary>
           <JobTitle>CTO</JobTitle>
-          <JobCompany>TBA</JobCompany>
+          <JobCompany>Carla</JobCompany>
           <JobMeta>
             <JobDuration>January 2021 - Present</JobDuration>
             <JobLocation>Remote, Sweden</JobLocation>
