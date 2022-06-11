@@ -20,7 +20,6 @@ Here's a shortlist of tools, libraries and services used to build this website.
 - [instant.page](https://instant.page/) - Uses just-in-time preloading — it preloads a page right before a user clicks on it.
 
 
-
 ### CI/CD
 
 - [GitHub Actions](https://github.com/features/actions) - CI Workflows & Runners
@@ -37,3 +36,12 @@ Here's a shortlist of tools, libraries and services used to build this website.
 
 - [Simple Analytics](https://simpleanalytics.com/) - Like Google Analytics, but simple
 
+
+## Usage
+
+
+### Add a new blog post
+
+1. Add md file to blog
+2. Add entry to blog-manifest.json
+3. Deploy       
