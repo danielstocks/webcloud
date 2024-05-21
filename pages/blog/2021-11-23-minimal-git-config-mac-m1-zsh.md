@@ -70,6 +70,8 @@ Instead of copy pasting the above (which i used to do all the time), I now have 
 alias gpo="git push -u origin HEAD"
 ```
 
+Edit (2024-05-21): This can now also be set to happen automatically with the [push.autoSetupRemote](https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushautoSetupRemote) git configuration flag.
+
 ## Minor Zsh improvements
 
 ### Prompt
@@ -110,7 +112,6 @@ autoload -Uz compinit && compinit
 ```
 
 And you're done. Magic.
-
 
 ### But what about "x" ?
 
