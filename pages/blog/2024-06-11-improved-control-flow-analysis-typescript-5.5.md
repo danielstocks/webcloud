@@ -3,7 +3,7 @@
 ---
 
 <Intro>
-TypeScript 5.5 ships with some nice ergonomical improvements to type inference when working with arrays and indexed accessed objects.
+TypeScript 5.5 ships with some nice ergonomic improvements to type inference when working with arrays and indexed accessed objects.
 </Intro>
 
 Isn't it annoying when the TypeScript compiler can't infer a type that you as developer felt was quite obvious to deduce? I know that I hate to write code just to please the compiler. This has thankfully improved a lot of the years and has now been improved further in [TypeScript 5.5](https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-beta/) (pending release as of writing)
@@ -36,7 +36,7 @@ items
   });
 ```
 
-lo and behold I was pleasnly suprised the other day when I by accident tried to compile some code without the extra type check and it somehow worked! Only then did I learn that [TypeScript 5.5](https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-beta/#inferred-type-predicates) can [Infer type predicates from function bodies using control flow analysis](https://github.com/microsoft/TypeScript/pull/57465). Which means:
+lo and behold I was pleasantly surprised the other day when I by accident tried to compile some code without the extra type check and it somehow worked! Only then did I learn that [TypeScript 5.5](https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-beta/#inferred-type-predicates) can [Infer type predicates from function bodies using control flow analysis](https://github.com/microsoft/TypeScript/pull/57465). Which means:
 
 ```ts
 const items = [1, 2, "three"];
@@ -78,7 +78,7 @@ Try it out yourself in the [TypeScript Playground](https://www.typescriptlang.or
 
 ## Control Flow Narrowing for Constant Indexed Accesses
 
-Another improvement is that TypeScript is now able to narrow expressions of the form obj[key] when both obj and key are effectively constant
+Another improvement is that TypeScript is now able to narrow expressions of the form `obj[key]` when both ´obj´ and ´key´ are constant.
 
 ```ts
 function test(obj: Record<string, unknown>, key: string) {
@@ -95,6 +95,6 @@ test(
 );
 ```
 
-Trying to compile the above code prior to 5.5 would fail, but now works as expected. Try out [the example](https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABFApgZygCjgIwFYBciASihHAE4AmAPBhTGAOYA0i4A1mHAO5gB8bDigCeReoyYBKRAG8AUIiWIYwRJigiADijhrceANrCRAXUQBeK4gBEE5jZkLlLxAeOjTAOihwAqlo6FADCAIZoKJhSANxKAPRxiAByvG4cbFoUKABu8CBoADYiiDzhtgDy+GRQKmhuapo6iADknNx8zTZeisoAvvL98qgYmM6ITFkosMxENgAWKAUFcDYDbDYTKFOSjkA) yourself in the TypeScript Playground
+Trying to compile the above code prior to 5.5 would fail, but now works as expected. Try out [the example](https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABFApgZygCjgIwFYBciASihHAE4AmAPBhTGAOYA0i4A1mHAO5gB8bDigCeReoyYBKRAG8AUIiWIYwRJigiADijhrceANrCRAXUQBeK4gBEE5jZkLlLxAeOjTAOihwAqlo6FADCAIZoKJhSANxKAPRxiAByvG4cbFoUKABu8CBoADYiiDzhtgDy+GRQKmhuapo6iADknNx8zTZeisoAvvL98qgYmM6ITFkosMxENgAWKAUFcDYDbDYTKFOSjkA) yourself in the TypeScript Playground.
 
 That's it. Less screaming, kicking and fighting the compiler, more fun and games. Enjoy!
