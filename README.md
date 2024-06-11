@@ -19,12 +19,6 @@ Here's a shortlist of tools, libraries and services used to build this website.
 - [Prism](https://prismjs.com/) & [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) - Syntax highlighting for code examples
 - [instant.page](https://instant.page/) - Uses just-in-time preloading — it preloads a page right before a user clicks on it.
 
-### CI/CD
-
-- [GitHub Actions](https://github.com/features/actions) - CI Workflows & Runners
-- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Web Performance & QA testing
-- [Percy](https://percy.io/) - Visual regression testing
-
 ### Deployment
 
 - [Zeit Now](https://zeit.co/home) - Zero config static site deployments, reverse proxy & CDN

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider node bin/blog && next dev",
+    "dev": "export NODE_OPTIONS='--openssl-legacy-provider' && node bin/blog && next dev",
     "build": "node bin/blog && next build && next export"
   },
   "dependencies": {
