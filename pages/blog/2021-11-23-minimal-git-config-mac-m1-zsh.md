@@ -72,6 +72,8 @@ alias gpo="git push -u origin HEAD"
 
 Edit (2024-05-21): This can now also be set to happen automatically with the [push.autoSetupRemote](https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushautoSetupRemote) git configuration flag.
 
+You can set it by running `git config --global --add --bool push.autoSetupRemote true` in your CLI.
+
 ## Minor Zsh improvements
 
 ### Prompt
