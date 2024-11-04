@@ -5,7 +5,7 @@ import { Spacer } from "../components/spacer";
 import { Link, IconLink } from "../components/link";
 import { Title } from "../components/title";
 import { Paragraph } from "../components/paragraph";
-import { Github, Linkedin, Twitter } from "../components/social-icons";
+import { Github, Linkedin, Bluesky } from "../components/social-icons";
 import blogPosts from "../blog-manifest.json";
 
 const blogPostsGroupedByYear = {};
@@ -63,8 +63,8 @@ const Home = () => (
           <Github />
         </IconLink>
         ,{" "}
-        <IconLink href="https://twitter.com/roflwtfbbq">
-          <Twitter />
+        <IconLink href="https://bsky.app/profile/roflwtfbbq.bsky.social">
+          <Bluesky />
         </IconLink>{" "}
         or{" "}
         <IconLink href="https://www.linkedin.com/in/daniel-stocks">
