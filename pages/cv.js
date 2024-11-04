@@ -60,12 +60,6 @@ const CV = () => (
           <span>github.com/danielstocks</span>
         </SocialLink>
         <Spacer size={2} />
-        <SocialLink href="https://twitter.com/roflwtfbbq">
-          <Twitter />
-          <Spacer size={2} />
-          <span>twitter.com/roflwtfbbq</span>
-        </SocialLink>
-        <Spacer size={2} />
         <SocialLink href="https://www.linkedin.com/in/daniel-stocks">
           <Linkedin />
           <Spacer size={2} />

@@ -7,7 +7,7 @@ import { Flex } from "./flex";
 import { Card } from "./card";
 import { Spacer } from "./spacer";
 import { Paragraph } from "./paragraph";
-import { Twitter } from "../components/social-icons";
+import { Twitter, Bluesky } from "../components/social-icons";
 import { Title } from "./title";
 import { BackToBase } from "./back-to-base";
 import { createComponentWithProxy } from "react-fela";
@@ -28,6 +28,7 @@ const Avatar = createComponentWithProxy(
 );
 
 const TWEET = "https://twitter.com/intent/tweet?text=";
+const BLUESKY = "https://bsky.app/intent/compose?text=";
 
 export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
   const router = useRouter();
@@ -39,16 +40,32 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
       <BackToBase />
       <Flex as="main">{children}</Flex>
       <Spacer size={6} />
-      <SocialLink
-        target="_blank"
-        rel="noopener"
-        href={`${TWEET}${title} - https://webcloud.se${router.pathname}/`}
-      >
-        <Twitter />
-        <Spacer size={1} />
-        <span>Share on Twitter</span>
-      </SocialLink>
 
+      <Flex
+        extend={{
+          flexDirection: "row",
+          gap: "32px",
+        }}
+      >
+        <SocialLink
+          target="_blank"
+          rel="noopener"
+          href={`${TWEET}${title} - https://webcloud.se${router.pathname}/`}
+        >
+          <div><Twitter /></div>
+          <Spacer size={1} />
+          <span>Share on Twitter</span>
+        </SocialLink>
+        <SocialLink
+          target="_blank"
+          rel="noopener"
+          href={`${BLUESKY}${title} - https://webcloud.se${router.pathname}/`}
+        >
+          <div><Bluesky /></div>
+          <Spacer size={1} />
+          <span>Share on Bluesky</span>
+        </SocialLink>
+      </Flex>
       <Spacer size={10} />
       <Card
         extend={{ width: "100%", flexDirection: "row", marginLeft: "-16px" }}

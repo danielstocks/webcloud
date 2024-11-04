@@ -106,7 +106,6 @@ export const SocialLink = ({ children, ...props }) => (
     as="a"
     extend={{
       flexShrink: 0,
-      flexGrow: 1,
       textDecoration: "none",
       display: "inline-flex",
       "& svg": {
@@ -127,6 +126,7 @@ export const SocialLink = ({ children, ...props }) => (
       "& span": {
         color: "var(--color-primary)",
         lineHeight: "24px",
+        flexShrink: 0,
         borderBottom: "1px solid var(--color-border)",
         transition: "all 0.2s ease-in-out",
         ":hover": {
