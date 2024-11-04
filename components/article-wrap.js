@@ -43,8 +43,8 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
 
       <Flex
         extend={{
-          direction: "row",
-          gap: "10px",
+          flexDirection: "row",
+          gap: "32px",
         }}
       >
         <SocialLink
@@ -52,7 +52,7 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           rel="noopener"
           href={`${TWEET}${title} - https://webcloud.se${router.pathname}/`}
         >
-          <Twitter />
+          <div><Twitter /></div>
           <Spacer size={1} />
           <span>Share on Twitter</span>
         </SocialLink>
@@ -61,7 +61,7 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           rel="noopener"
           href={`${BLUESKY}${title} - https://webcloud.se${router.pathname}/`}
         >
-          <Bluesky />
+          <div><Bluesky /></div>
           <Spacer size={1} />
           <span>Share on Bluesky</span>
         </SocialLink>
