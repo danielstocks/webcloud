@@ -83,7 +83,8 @@ Another improvement is that TypeScript is now able to narrow expressions of the 
 ```ts
 function test(obj: Record<string, unknown>, key: string) {
   if (typeof obj[key] === "string") {
-    obj[key].toUpperCase(); // Now ok, previously was "Object is of type 'unknown'".
+    // Now ok, previously was "Object is of type 'unknown'".
+    obj[key].toUpperCase();
   }
 }
 

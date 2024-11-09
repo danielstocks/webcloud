@@ -44,7 +44,7 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
       <Flex
         extend={{
           flexDirection: "row",
-          gap: "32px",
+          gap: "32px"
         }}
       >
         <SocialLink
@@ -52,7 +52,9 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           rel="noopener"
           href={`${TWEET}${title} - https://webcloud.se${router.pathname}/`}
         >
-          <div><Twitter /></div>
+          <div>
+            <Twitter />
+          </div>
           <Spacer size={1} />
           <span>Share on Twitter</span>
         </SocialLink>
@@ -61,7 +63,9 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           rel="noopener"
           href={`${BLUESKY}${title} - https://webcloud.se${router.pathname}/`}
         >
-          <div><Bluesky /></div>
+          <div>
+            <Bluesky />
+          </div>
           <Spacer size={1} />
           <span>Share on Bluesky</span>
         </SocialLink>
@@ -80,8 +84,10 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           <Paragraph extend={{ color: "var(--color-fg-alt)" }}>
             I&rsquo;m Daniel, Software Engineer from Sweden. If you have any
             questions regarding this article please reach out to me on{" "}
-            <Link href="https://twitter.com/roflwtfbbq">Twitter</Link>. You can
-            also find me on{" "}
+            <Link href="https://bsky.app/profile/roflwtfbbq.bsky.social">
+              Bluesky
+            </Link>
+            . You can also find me on{" "}
             <Link href="https://github.com/danielstocks">GitHub</Link>.
           </Paragraph>
         </Flex>
