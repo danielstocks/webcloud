@@ -51,11 +51,14 @@ const Home = () => (
         as="p"
         extend={{ "& svg": { verticalAlign: "text-bottom" } }}
       >
-        I'm Daniel and this is my personal website. I <Link href="/cv">specialise</Link> in 
-        {" "} creating software.
-  
-        I'm currently occupied improving the <Link href="https://www.carla.se/">online car buying and leasing experience</Link> for electrified vehicles.{" "}
-        If you wish to get in touch please send an email to{" "}
+        I'm Daniel and this is my personal website. I{" "}
+        <Link href="/cv">specialise</Link> in creating software. I'm currently
+        occupied improving the{" "}
+        <Link href="https://www.carla.se/">
+          online car buying and leasing experience
+        </Link>{" "}
+        for electrified vehicles. If you wish to get in touch please send an
+        email to{" "}
         <Link href="mailto:daniel@webcloud.se">daniel@webcloud.se</Link>
         <br />
         or find me on{" "}
@@ -63,7 +66,7 @@ const Home = () => (
           <Github />
         </IconLink>
         ,{" "}
-        <IconLink href="https://bsky.app/profile/roflwtfbbq.bsky.social">
+        <IconLink href="https://bsky.app/profile/webcloud.se">
           <Bluesky />
         </IconLink>{" "}
         or{" "}

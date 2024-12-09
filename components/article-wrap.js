@@ -84,10 +84,8 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
           <Paragraph extend={{ color: "var(--color-fg-alt)" }}>
             I&rsquo;m Daniel, Software Engineer from Sweden. If you have any
             questions regarding this article please reach out to me on{" "}
-            <Link href="https://bsky.app/profile/roflwtfbbq.bsky.social">
-              Bluesky
-            </Link>
-            . You can also find me on{" "}
+            <Link href="https://bsky.app/profile/webcloud.se">Bluesky</Link>.
+            You can also find me on{" "}
             <Link href="https://github.com/danielstocks">GitHub</Link>.
           </Paragraph>
         </Flex>
