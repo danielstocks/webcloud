@@ -54,6 +54,9 @@ export const components = {
   Intro,
   p,
   a: Link,
+  InlineImage: function InlineImage({ ...props }) {
+    return <img {...props} />;
+  },
   img: ArticleImage,
   Link,
   li: ListItem,
@@ -115,12 +118,12 @@ export const components = {
           title="Disclaimer: I get paid if you click on this link and buy something."
           extend={{
             cursor: "help",
-            fontSize: "10px",
+            fontSize: "8px",
             letterSpacing: "0.03em",
             padding: "2px 4px",
             position: "relative",
             top: "-2px",
-            background: "var(--color-primary-alt)",
+            background: "var(--color-bg-alt)",
             marginLeft: "8px",
             color: "var(--color-fg)"
           }}
