@@ -27,7 +27,7 @@ The second edition was published in 2024, five years after the first. Dan mentio
 
 ## How I read it
 
-I've read the <SponsoredLink>Kindle version of the book</SponsoredLink> on my Kindle. It's 674 pages long, divided into ten chapters, consisting of 83 self contained topics (items, as the book calls them) in total. It's worth noting that there are <em>571 pages</em> if you only count the chapters. The rest is supplementary material such as the appendix and index. Below is a visualization of the chapters and their relative length, to give a sense of how the material is distributed.
+I've read the <SponsoredLink href="https://www.amazon.com/Effective-Typescript-Specific-Ways-Improve/dp/1098155068?&linkCode=ll1&tag=webcloud0c-20&linkId=8cc06603804e65fc92f335dd7894736e&language=en_US&ref_=as_li_ss_tl">Kindle version of the book</SponsoredLink> on my Kindle. It's 674 pages long, divided into ten chapters, consisting of 83 self contained topics (items, as the book calls them) in total. It's worth noting that there are <em>571 pages</em> if you only count the chapters. The rest is supplementary material such as the appendix and index. Below is a visualization of the chapters and their relative length, to give a sense of how the material is distributed.
 
 
 <div style={{ display: "flex", width: "100%", height: "24px", fontSize: "12px", margin: "24px 0", 
