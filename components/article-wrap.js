@@ -75,7 +75,7 @@ export const ArticleWrap = ({ title, children, nextPost, prevPost }) => {
         extend={{ width: "100%", flexDirection: "row", marginLeft: "-16px" }}
       >
         <div>
-          <Avatar alt="Photo of me" src="/photo.jpg" />
+          <Avatar alt="Photo of me" src="/photo-2025.jpg" />
         </div>
         <Spacer size={3} />
         <Flex>
